@@ -1,0 +1,15 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .neon-glow-static {
+      text-shadow:
+        0 0 2px #A654FB,
+        0 0 6px #A654FB,
+        0 0 12px #A654FB,
+        0 0 24px #A654FB,
+        0 0 48px #A654FB;
+    }
+  }
