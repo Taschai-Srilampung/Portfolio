@@ -242,6 +242,7 @@ function FeaturedProjects() {
 
 
   return (
+    <section id="projects">
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-16 lg:py-24 relative overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -445,6 +446,7 @@ function FeaturedProjects() {
         </div>
       </div>
     </div>
+    </section>
   );
 }
 

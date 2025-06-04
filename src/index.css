@@ -13,3 +13,6 @@
         0 0 48px #A654FB;
     }
   }
+  html {
+    scroll-behavior: smooth;
+  }

@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollIndicator from './ScrollIndicator'
 import TypewriterText from './TypewriterText'
-
+import { ChevronDown } from 'lucide-react';
 
 
 function HeroSection() {
@@ -64,9 +64,10 @@ function HeroSection() {
           </div>
         </div>
 
-        {/* Scroll Indicator อยู่ล่างสุดของ HeroSection */}
-        <div className="flex justify-center mt-10 mb-4">
-          <ScrollIndicator />
+       
+        {/* Bouncing Down Icon */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <ChevronDown className="w-8 h-8 text-white" />
         </div>
       </div>
     </div>
