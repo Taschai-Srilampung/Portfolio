@@ -13,21 +13,33 @@ const LinkedinIcon = () => (
   </svg>
 );
 
-const TwitterIcon = () => (
+const FacebookIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
   </svg>
 );
 
-const DevIcon = () => (
+const YoutubeIcon = () => (
   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-    <path d="M7.826 10.083a.784.784 0 0 0-.468-.175h-.701v4.198h.701a.786.786 0 0 0 .468-.175c.155-.117.233-.292.233-.525v-2.798c.001-.233-.078-.408-.233-.525zM19.236 3H4.764C3.791 3 3.002 3.787 3.002 4.760v14.48c0 .973.789 1.760 1.762 1.760h14.472c.973 0 1.762-.787 1.762-1.760V4.760C20.998 3.787 20.209 3 19.236 3zM9.195 13.414c0 .755-.466 1.901-1.942 1.901H5.389V8.665h1.903c1.424 0 1.942 1.144 1.942 1.899v2.85zm4.045-3.562H11.1v1.544h1.309v1.188H11.1v1.543h2.142v1.188h-2.498a.813.813 0 0 1-.815-.815V9.667a.813.813 0 0 1 .815-.815h2.498v1.188zm4.165 4.4c-.584 1.686-1.317 1.336-1.317 1.336s-.733.35-1.317-1.336l-1.308-4.333h1.317l.816 3.167.816-3.167h1.317l-1.324 4.333z"/>
+    <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+  </svg>
+);
+
+const PortfolioIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/>
   </svg>
 );
 
 const MailIcon = () => (
   <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 3.26a2 2 0 001.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+);
+
+const PhoneIcon = () => (
+  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
   </svg>
 );
 
@@ -50,38 +62,32 @@ function Footer() {
     {
       icon: GithubIcon,
       name: "GitHub",
-      url: "#",
+      url: "https://github.com/Taschai-Srilampung",
       color: "hover:text-gray-300",
       bg: "hover:bg-gray-700"
     },
     {
       icon: LinkedinIcon,
       name: "LinkedIn",
-      url: "#",
+      url: "https://www.linkedin.com/in/taschai-srilampung-b65792353",
       color: "hover:text-blue-400",
       bg: "hover:bg-blue-900/30"
     },
     {
-      icon: TwitterIcon,
-      name: "Twitter",
-      url: "#",
-      color: "hover:text-sky-400",
-      bg: "hover:bg-sky-900/30"
+      icon: FacebookIcon,
+      name: "Facebook",
+      url: "https://www.facebook.com/palm.taschai",
+      color: "hover:text-blue-500",
+      bg: "hover:bg-blue-900/30"
     },
     {
-      icon: DevIcon,
-      name: "Dev.to",
-      url: "#",
-      color: "hover:text-green-400",
-      bg: "hover:bg-green-900/30"
+      icon: YoutubeIcon,
+      name: "YouTube",
+      url: "https://www.youtube.com/@MyRyoLife",
+      color: "hover:text-red-400",
+      bg: "hover:bg-red-900/30"
     },
-    {
-      icon: MailIcon,
-      name: "Email",
-      url: "mailto:taschai@example.com",
-      color: "hover:text-purple-400",
-      bg: "hover:bg-purple-900/30"
-    }
+  
   ];
 
   const scrollToTop = () => {
@@ -123,29 +129,32 @@ function Footer() {
             <div className="mb-6">
               <h3 className="text-2xl font-bold text-white mb-2">
                 <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                  taschai
+                  Taschai Srilampung
                 </span>
               </h3>
               <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
-              <p className="text-gray-300 leading-relaxed">
-                Passionate software engineer crafting digital experiences with modern technologies. 
-                Always learning, always building, always pushing boundaries.
+              <p className="text-gray-300 leading-relaxed mb-3">
+                Hi, I'm Taschai — I enjoy solving unique problems and learning new things. 
+                I'm a self-motivated learner with a strong interest in software development, AI, and cybersecurity.
               </p>
+              <div className="text-purple-400 font-medium italic text-sm">
+                "Sometimes I look impossible until it's done."
+              </div>
             </div>
             
             {/* Quick Stats */}
             <div className="grid grid-cols-3 gap-4 mb-6">
               <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/50">
-                <div className="text-purple-400 font-bold text-lg">3+</div>
-                <div className="text-gray-400 text-xs">Years Exp</div>
+                <div className="text-purple-400 font-bold text-lg">2024</div>
+                <div className="text-gray-400 text-xs">Graduate</div>
               </div>
               <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/50">
-                <div className="text-blue-400 font-bold text-lg">50+</div>
+                <div className="text-blue-400 font-bold text-lg">5+</div>
                 <div className="text-gray-400 text-xs">Projects</div>
               </div>
               <div className="text-center p-3 bg-gray-800/30 rounded-lg border border-gray-700/50">
-                <div className="text-green-400 font-bold text-lg">24/7</div>
-                <div className="text-gray-400 text-xs">Learning</div>
+                <div className="text-green-400 font-bold text-lg">3.23</div>
+                <div className="text-gray-400 text-xs">GPA</div>
               </div>
             </div>
           </div>
@@ -154,7 +163,7 @@ function Footer() {
           <div className="lg:col-span-1">
             <h4 className="text-white font-semibold text-lg mb-4">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2">
-              {['Home', 'About', 'Skills', 'Projects', 'Contact', 'Resume'].map((link, index) => (
+              {[ 'About', 'Skills', 'Projects', 'Contact'].map((link, index) => (
                 <a
                   key={index}
                   href={`#${link.toLowerCase()}`}
@@ -164,6 +173,15 @@ function Footer() {
                   {link}
                 </a>
               ))}
+            </div>
+            
+            {/* Education Info */}
+            <div className="mt-6 p-4 bg-gray-800/20 rounded-lg border border-gray-700/30">
+              <h5 className="text-white font-medium text-sm mb-2">Education</h5>
+              <div className="text-gray-300 text-xs">
+                <div className="font-medium">Chulalongkorn University</div>
+                <div className="text-gray-400">Computer Science (2020-2024)</div>
+              </div>
             </div>
           </div>
 
@@ -175,7 +193,13 @@ function Footer() {
                 <div className="w-8 h-8 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
                   <MailIcon />
                 </div>
-                <span className="text-sm">taschai@example.com</span>
+                <span className="text-sm">taschai.sr@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-3 text-gray-300">
+                <div className="w-8 h-8 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                  <PhoneIcon />
+                </div>
+                <span className="text-sm">062-703-3574</span>
               </div>
               <div className="flex items-center gap-3 text-gray-300">
                 <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center">
@@ -189,13 +213,15 @@ function Footer() {
             </div>
             
             {/* Social Links */}
-            <div className="flex gap-3">
+            <div className="flex gap-3 flex-wrap">
               {socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
                   <a
                     key={index}
                     href={social.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 transition-all duration-300 transform hover:scale-110 ${social.color} ${social.bg} hover:border-purple-500/50`}
                     title={social.name}
                   >
@@ -212,7 +238,7 @@ function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             {/* Copyright */}
             <div className="flex items-center gap-2 text-gray-400 text-sm">
-              <span>© {currentYear} taschai. Made with</span>
+              <span>© {currentYear} Taschai Srilampung. Made with</span>
               <HeartIcon />
               <span>in Thailand</span>
             </div>
@@ -227,11 +253,13 @@ function Footer() {
             </button>
           </div>
           
-          {/* Additional Info */}
-          <div className="mt-4 pt-4 border-t border-gray-800/50 text-center">
-            <p className="text-gray-500 text-xs">
-              This portfolio showcases my journey in software development. 
-              <span className="text-purple-400 ml-1">Always open to new opportunities!</span>
+          {/* Call to Action */}
+          <div className="mt-6 pt-4 border-t border-gray-800/50 text-center">
+            <p className="text-gray-300 text-sm mb-2">
+              Currently open to new opportunities in Software Engineering, AI, and Cybersecurity!
+            </p>
+            <p className="text-purple-400 text-sm font-medium">
+              Looking for a passionate developer who learns fast and stays committed? Let's connect! 🚀
             </p>
           </div>
         </div>

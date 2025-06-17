@@ -11,30 +11,34 @@ function AboutMe() {
     threshold: 0.2, 
     rootMargin: '0px 0px -100px 0px' 
   });
-  const [experiencesRef, visibleExperiences] = useStaggeredAnimation(3, {
+  const [projectsRef, visibleProjects] = useStaggeredAnimation(3, {
     threshold: 0.1,
     staggerDelay: 200
   });
 
-  const experiences = [
+  const recentProjects = [
     {
-      title: "Senior Software Engineer",
-      company: "Tech Solutions Co., Ltd.",
-      period: "2020 - Present",
-      description: "Leading development of enterprise web applications and implementing security best practices."
+      title: "Mobile Repair Shop Website",
+      type: "Freelance Project",
+      period: "2024",
+      description: "Responsive frontend website for a mobile phone repair shop. Focused on creating an intuitive user interface that works seamlessly on both desktop and mobile devices.",
+      tech: ["React", "Tailwind CSS", "Vite.js"]
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Innovations",
-      period: "2018 - 2020",
-      description: "Developed and maintained web applications using React and Node.js."
+      title: "Equipment Management System",
+      type: "Final Year Project",
+      period: "2024",
+      description: "Fullstack web application for equipment inventory management using React, Tailwind CSS, MySQL, and Strapi. Handled complete development cycle from requirements gathering to deployment.",
+      tech: ["React", "Tailwind CSS", "MySQL", "Strapi"]
     },
     {
-      title: "Software Developer Intern",
-      company: "CodeCraft",
-      period: "2017 - 2018",
-      description: "Assisted in developing features for client projects and internal tools."
-    }
+      title: "Vehicle & Barrier Detection AI",
+      type: "Term Project",
+      period: "2024",
+      description: "Computer vision project using YOLOv8 for detecting vehicles and barriers in images. Responsible for data labeling and model training with google map images.",
+      tech: ["YOLOv8", "Python", "Computer Vision"]
+    },
+  
   ];
 
   return (
@@ -73,24 +77,25 @@ function AboutMe() {
             }`}
             style={{ transitionDelay: '200ms' }}
           >
-            {/* Thai Name */}
+            {/* Name */}
             <div className="transform transition-all duration-700 delay-300">
               <h3 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-4 lg:mb-6">
-                ทัศชัย ศรีลำพัง
+                Taschai Srilampung
               </h3>
             </div>
             
             {/* Description */}
             <div className="space-y-4 transform transition-all duration-700 delay-500">
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                I'm a passionate Software Engineer with expertise in building robust and scalable 
-                applications. With a strong foundation in both frontend and backend technologies, I enjoy 
-                creating solutions that are not only functional but also secure and user-friendly.
+                Hi, I'm Taschai — I enjoy solving unique problems and learning new things. 
+                I'm a self-motivated learner with a strong interest in software development, AI, and cybersecurity.
               </p>
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                My journey in software development began with a fascination for how technology can 
-                solve real-world problems. Today, I specialize in web development, system architecture, 
-                and cybersecurity, constantly learning and adapting to new technologies.
+                As an INTP-T personality, I love diving deep into complex problems and finding innovative solutions. 
+                My curiosity drives me to constantly explore new technologies and challenge myself with diverse projects.
+              </p>
+              <p className="text-purple-300 text-sm sm:text-base lg:text-lg font-medium italic">
+                "It always seems impossible until it is done." - Nelson Mandela
               </p>
             </div>
             
@@ -98,15 +103,15 @@ function AboutMe() {
             <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 pt-4 transform transition-all duration-700 delay-700">
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
                 <p className="text-gray-400 text-sm font-medium">Name:</p>
-                <p className="text-white text-sm lg:text-base">ทัศชัย ศรีลำพัง</p>
+                <p className="text-white text-sm lg:text-base">Taschai Srilampung</p>
               </div>
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
                 <p className="text-gray-400 text-sm font-medium">Email:</p>
                 <p className="text-white text-sm lg:text-base">taschai.sr@gmail.com</p>
               </div>
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
-                <p className="text-gray-400 text-sm font-medium">Role:</p>
-                <p className="text-white text-sm lg:text-base">Software Engineer</p>
+                <p className="text-gray-400 text-sm font-medium">Education:</p>
+                <p className="text-white text-sm lg:text-base">Chulalongkorn University</p>
               </div>
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
                 <p className="text-gray-400 text-sm font-medium">Location:</p>
@@ -116,18 +121,21 @@ function AboutMe() {
             
             {/* Contact Button */}
             <div className="pt-4 transform transition-all duration-700 delay-900">
-              <button className="group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 lg:px-8 py-3 lg:py-3.5 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm lg:text-base shadow-lg hover:shadow-purple-500/25">
-                <span className="flex items-center gap-2">
-                  Contact Me
-                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                  </svg>
-                </span>
-              </button>
+            <a 
+  href="#contact"
+  className="inline-block group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 lg:px-8 py-3 lg:py-3.5 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm lg:text-base shadow-lg hover:shadow-purple-500/25"
+>
+  <span className="flex items-center gap-2">
+    Contact Me
+    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+    </svg>
+  </span>
+</a>
             </div>
           </div>
 
-          {/* Right Column - Experience */}
+          {/* Right Column - Recent Projects */}
           <div 
             ref={rightColumnRef}
             className={`space-y-6 transform transition-all duration-1000 ${
@@ -138,20 +146,20 @@ function AboutMe() {
             style={{ transitionDelay: '400ms' }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-6 lg:mb-8">
-              My Experience
+              Recent Projects
             </h3>
             
-            {/* Experience Timeline */}
-            <div className="relative" ref={experiencesRef}>
+            {/* Projects Timeline */}
+            <div className="relative" ref={projectsRef}>
               {/* Timeline line */}
               <div className="absolute left-4 top-6 bottom-0 w-0.5 bg-gradient-to-b from-purple-500 to-pink-500 rounded-full"></div>
               
               <div className="space-y-6 lg:space-y-8">
-                {experiences.map((exp, index) => (
+                {recentProjects.map((project, index) => (
                   <div 
                     key={index} 
                     className={`relative group transform transition-all duration-700 ${
-                      visibleExperiences.has(index)
+                      visibleProjects.has(index)
                         ? 'translate-y-0 opacity-100' 
                         : 'translate-y-8 opacity-0'
                     }`}
@@ -162,23 +170,34 @@ function AboutMe() {
                     {/* Timeline dot */}
                     <div className="absolute left-2 top-4 w-4 h-4 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full border-2 border-gray-900 group-hover:scale-125 transition-transform duration-300"></div>
                     
-                    {/* Experience Card */}
+                    {/* Project Card */}
                     <div className="ml-12 p-4 lg:p-6 bg-gray-800/50 backdrop-blur-sm rounded-xl border border-gray-700/50 hover:border-purple-500/50 transition-all duration-300 group-hover:transform group-hover:scale-[1.02] group-hover:shadow-xl group-hover:shadow-purple-500/10">
                       <h4 className="text-lg lg:text-xl font-bold text-white mb-1 lg:mb-2 group-hover:text-purple-300 transition-colors duration-300">
-                        {exp.title}
+                        {project.title}
                       </h4>
                       <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 mb-3 lg:mb-4">
                         <p className="text-purple-400 font-medium text-sm lg:text-base">
-                          {exp.company}
+                          {project.type}
                         </p>
                         <span className="hidden sm:block text-gray-500">•</span>
                         <p className="text-gray-400 text-sm lg:text-base">
-                          {exp.period}
+                          {project.period}
                         </p>
                       </div>
-                      <p className="text-gray-300 text-sm lg:text-base leading-relaxed">
-                        {exp.description}
+                      <p className="text-gray-300 text-sm lg:text-base leading-relaxed mb-3">
+                        {project.description}
                       </p>
+                      {/* Tech Stack */}
+                      <div className="flex flex-wrap gap-2">
+                        {project.tech.map((tech, techIndex) => (
+                          <span 
+                            key={techIndex}
+                            className="px-2 py-1 bg-purple-500/20 text-purple-300 text-xs rounded-full border border-purple-500/30"
+                          >
+                            {tech}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 ))}

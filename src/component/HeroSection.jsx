@@ -1,7 +1,7 @@
 import React from 'react'
 import ScrollIndicator from './ScrollIndicator'
 import TypewriterText from './TypewriterText'
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, Download } from 'lucide-react';
 
 
 function HeroSection() {
@@ -14,31 +14,42 @@ function HeroSection() {
       </div>
 
       {/* Main content wrapper with full screen height */}
-      <div className="relative z-10 flex flex-col justify-between min-h-screen pt-16 md:pt-20">
+      <div className="relative z-10 flex flex-col justify-center gap-10 min-h-screen pt-16 md:pt-20 pb-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-20 flex-1 flex flex-col lg:flex-row items-center justify-between">
           
           {/* Left content */}
           <div className="flex-1 max-w-2xl text-center lg:text-left mb-8 lg:mb-0">
-            <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Software Engineer</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
-              Hi, I'm{' '}
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Taschai
-              </span>
-            </h1>
-            <TypewriterText />
-            <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Passionate about creating elegant solutions to complex problems through code. 
-              Specializing in web development, cybersecurity, and system architecture.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
-              <button className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm md:text-base">
-                View My Work
-              </button>
-              <button className="border border-white/30 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 text-sm md:text-base">
-                Contact Me
-              </button>
-            </div>
+          <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Aspiring Software Engineer</p>
+<h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
+  Hi, I'm{' '}
+  <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+    Taschai
+  </span>
+</h1>
+<TypewriterText />
+<p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
+  I'm a self-motivated developer with a strong interest in web development, system security, and open-source technologies. Always learning, always building.
+</p>
+<div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+<a
+  href="#projects"
+  className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center"
+>
+  View My Work
+</a>
+  <a
+    href="src/assets/Taschai_Srilampung_Resume.pdf"
+    download="Taschai_Srilampung_Resume.pdf"
+    target="_blank"
+    className="group border border-white/30 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center"
+  >
+    <div className="flex items-center justify-center gap-2">
+      <span className="font-bold">Get My Resume</span>
+      <Download className="w-4 h-4 md:w-5 md:h-5 group-hover:animate-bounce" />
+    </div>
+  </a>
+</div>
+
           </div>
 
           {/* Right content - Profile circle */}
