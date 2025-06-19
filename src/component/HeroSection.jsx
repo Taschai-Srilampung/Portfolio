@@ -2,6 +2,8 @@ import React from 'react'
 import ScrollIndicator from './ScrollIndicator'
 import TypewriterText from './TypewriterText'
 import { ChevronDown, Download } from 'lucide-react';
+import profileImg from '../assets/profile.jpg';
+import fileResume from '../assets/Taschai_Srilampung_Resume.pdf';
 
 
 function HeroSection() {
@@ -38,7 +40,7 @@ function HeroSection() {
   View My Work
 </a>
   <a
-    href="src/assets/Taschai_Srilampung_Resume.pdf"
+    href={fileResume}
     download="Taschai_Srilampung_Resume.pdf"
     target="_blank"
     className="group border border-white/30 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center"
@@ -61,7 +63,7 @@ function HeroSection() {
                     <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
                   </svg> */}
                   <img
-                    src="src/assets/profile.jpg"
+                    src={profileImg}
                     alt="Profile"
                     className="w-full h-full object-cover rounded-full"
                   />
