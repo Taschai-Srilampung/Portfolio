@@ -16,13 +16,13 @@ jobs:
       - name: Set up SSH
         run: |
           mkdir -p ~/.ssh
-          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
+          echo "${{ secrets.DEPLOY_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
           ssh-keyscan -H 47.128.3.91 >> ~/.ssh/known_hosts
 
       - name: Deploy via SSH
         run: |
-          ssh -i ~/.ssh/id_rsa ubuntu@47.128.3.91 << 'EOF'
+          ssh -i ~/.ssh/deploy_key ubuntu@47.128.3.91 << 'EOF'
             cd ~/portfolio/Portfolio
             git pull origin main
             npm install
