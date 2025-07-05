@@ -21,7 +21,7 @@ function HeroSection() {
           
           {/* Left content */}
           <div className="flex-1 max-w-2xl text-center lg:text-left mb-8 lg:mb-0">
-          <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Aspiring Software Engineer</p>
+          <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Aspiring Robotics Software Engineer</p>
 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
   Hi, I'm{' '}
   <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
