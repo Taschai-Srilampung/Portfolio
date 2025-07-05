@@ -134,8 +134,8 @@ function Footer() {
               </h3>
               <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
               <p className="text-gray-300 leading-relaxed mb-3">
-                Hi, I'm Taschai — I enjoy solving unique problems and learning new things. 
-                I'm a self-motivated learner with a strong interest in software development, AI, and cybersecurity.
+              Hi, I'm Taschai — a passionate Computer Science graduate exploring robotics and automation. 
+              I'm currently learning ROS2, experimenting with embedded systems, and developing hands-on experience with hardware-software integration.
               </p>
               <div className="text-purple-400 font-medium italic text-sm">
                 "Sometimes I look impossible until it's done."
@@ -254,16 +254,20 @@ function Footer() {
           </div>
           
           {/* Call to Action */}
-          <div className="mt-6 pt-4 border-t border-gray-800/50 text-center">
-            <p className="text-gray-300 text-sm mb-2">
-              Currently open to new opportunities in Software Engineering, AI, and Cybersecurity!
-            </p>
-            <p className="text-purple-400 text-sm font-medium">
-              Looking for a passionate developer who learns fast and stays committed? Let's connect! 🚀
-            </p>
+          <div className="mt-8 text-center">
+            <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-6 backdrop-blur-sm">
+              <p className="text-lg font-semibold text-purple-300 mb-2">
+                Currently seeking entry-level opportunities in Robotics Software Engineering!
+              </p>
+              <p className="text-gray-300 text-sm">
+                Looking for a dedicated Computer Science graduate eager to learn and grow in robotics? Let's build the future together! 🤖
+              </p>
+            </div>
           </div>
         </div>
       </div>
+
+      
 
       {/* Decorative Elements */}
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-500 via-pink-500 to-blue-500"></div>

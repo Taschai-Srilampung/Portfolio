@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 
 const phrases = [
-  "I create secure applications.",
-  "I build smart applications.",
-  "I create elegant solutions."
+  "I develop autonomous systems.",
+  "I build robotic solutions.",
+  "I create intelligent machines."
 ];
 
 function TypewriterText() {

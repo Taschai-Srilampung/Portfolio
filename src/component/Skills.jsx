@@ -11,7 +11,7 @@ function Skills() {
     threshold: 0.1, 
     rootMargin: '0px 0px -50px 0px' 
   });
-  const [techIconsRef, visibleTechIcons] = useStaggeredAnimation(6, {
+  const [techIconsRef, visibleTechIcons] = useStaggeredAnimation(8, {
     threshold: 0.2,
     staggerDelay: 150
   });
@@ -20,171 +20,171 @@ function Skills() {
     staggerDelay: 200
   });
 
-  // Skills data with realistic levels for fresh graduate
+  // Robotics-focused skills data based on actual resume
   const skillsData = {
-    frontend: {
-      title: "Frontend Development",
-      description: "Building responsive user interfaces with modern web technologies.",
+    robotics: {
+      title: "Robotics & Middleware",
+      description: "ROS2 development and autonomous systems implementation.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z"/>
+          <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M11,6V8H13V6H11M11,10V18H13V10H11Z"/>
         </svg>
       ),
       skills: [
         { 
-          name: "React", 
-          level: "Intermediate", 
-          experience: "1+ year",
-          projects: ["Equipment Management System", "Mobile Repair Shop Website"],
-          description: "Components, hooks, state management, responsive design"
+          name: "ROS2", 
+          level: "Learning", 
+          experience: "Current",
+          projects: ["Autonomous Cleaning Robot", "Navigation Testing"],
+          description: "Learning navigation concepts, SLAM implementation, and basic node development"
         },
         { 
-          name: "HTML/CSS", 
-          level: "Intermediate", 
-          experience: "2+ years",
-          projects: ["University Projects", "Portfolio Website"],
-          description: "Semantic HTML, responsive design, CSS Grid & Flexbox"
+          name: "Micro-ROS", 
+          level: "Learning", 
+          experience: "Current",
+          projects: ["ESP32 Integration", "Hardware Interface"],
+          description: "ESP32 with Micro-ROS for cost-effective hardware interface development"
         },
         { 
-          name: "JavaScript", 
-          level: "Intermediate", 
-          experience: "2+ years",
-          projects: ["Web Applications", "Interactive Features"],
-          description: "ES6+, DOM manipulation, async programming basics"
+          name: "SLAM Fundamentals", 
+          level: "Learning", 
+          experience: "Current",
+          projects: ["LiDAR Integration Planning", "Mapping Concepts"],
+          description: "Simultaneous Localization and Mapping concepts for autonomous navigation"
         },
         { 
-          name: "Tailwind CSS", 
-          level: "Intermediate", 
-          experience: "1+ year",
-          projects: ["Modern UI Design", "Component Styling"],
-          description: "Utility-first CSS, rapid prototyping, responsive design"
+          name: "Sensor Integration", 
+          level: "Basic", 
+          experience: "Current",
+          projects: ["Xiaomi Vacuum LiDAR", "Servo Motor Control"],
+          description: "Planning LiDAR sensor integration for autonomous cleaning robot"
         }
       ]
     },
-    backend: {
-      title: "Backend Development",
-      description: "Server-side development and API integration experience.",
+    embedded: {
+      title: "Embedded Programming",
+      description: "Microcontroller programming and hardware-software integration.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20,3H4C2.89,3 2,3.89 2,5V19C2,20.11 2.89,21 4,21H20C21.11,21 22,20.11 22,19V5C22,3.89 21.11,3 20,3M20,19H4V5H20V19Z"/>
+          <path d="M17,17H7V7H17M21,11V9H19V7C19,5.89 18.1,5 17,5H15V3H13V5H11V3H9V5H7C5.89,5 5,5.89 5,7V9H3V11H5V13H3V15H5V17C5,18.1 5.89,19 7,19H9V21H11V19H13V21H15V19H17C18.1,19 19,18.1 19,17V15H21V13H19V11M16,8H8V16H16V8Z"/>
         </svg>
       ),
       skills: [
+        { 
+          name: "C/C++", 
+          level: "Intermediate", 
+          experience: "2+ years",
+          projects: ["ESP32 Programming", "Arduino Projects"],
+          description: "Microcontroller programming, embedded systems development"
+        },
         { 
           name: "Python", 
           level: "Intermediate", 
           experience: "2+ years",
-          projects: ["AI Bird Classification", "Vehicle Detection AI"],
-          description: "Data processing, machine learning basics, scripting"
+          projects: ["ROS2 Nodes", "YOLOv8 Vehicle Detection", "AI Bird Classification"],
+          description: "ROS node scripting, computer vision, machine learning applications"
         },
         { 
-          name: "Node.js", 
+          name: "ESP32", 
+          level: "Intermediate", 
+          experience: "Current",
+          projects: ["Autonomous Robot Interface", "Sensor Integration"],
+          description: "WiFi/Bluetooth integration, sensor interfacing, real-time control"
+        },
+        { 
+          name: "Arduino", 
           level: "Intermediate", 
           experience: "1+ year",
-          projects: ["Equipment Management API", "Learning Projects"],
-          description: "Express.js basics, RESTful APIs, server setup"
-        },
-        { 
-          name: "Strapi CMS", 
-          level: "Basic", 
-          experience: "6 months",
-          projects: ["Content Management", "API Backend"],
-          description: "Headless CMS, content modeling, API generation"
-        },
-        { 
-          name: ".NET", 
-          level: "Basic", 
-          experience: "2 months",
-          projects: ["ToDo App Backend", "University Assignment"],
-          description: "Web API development, basic backend structure"
+          projects: ["Servo Motor Control", "Sensor Projects"],
+          description: "Hardware prototyping, sensor integration, motor control"
         }
       ]
     },
-    database: {
-      title: "Database & Tools",
-      description: "Database design and development tools experience.",
+    systems: {
+      title: "Linux & DevOps",
+      description: "System administration and development environment setup.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12,3C7.58,3 4,4.79 4,7C4,9.21 7.58,11 12,11C16.42,11 20,9.21 20,7C20,4.79 16.42,3 12,3M4,9V12C4,14.21 7.58,16 12,16C16.42,16 20,14.21 20,12V9C20,11.21 16.42,13 12,13C7.58,13 4,11.21 4,9M4,14V17C4,19.21 7.58,21 12,21C16.42,21 20,19.21 20,17V14C20,16.21 16.42,18 12,18C7.58,18 4,16.21 4,14Z"/>
+          <path d="M12,2C6.48,2 2,6.48 2,12C2,17.52 6.48,22 12,22C17.52,22 22,17.52 22,12C22,6.48 17.52,2 12,2M12,20C7.59,20 4,16.41 4,12C4,7.59 7.59,4 12,4C16.41,4 20,7.59 20,12C20,16.41 16.41,20 12,20M12,6C8.69,6 6,8.69 6,12C6,15.31 8.69,18 12,18C15.31,18 18,15.31 18,12C18,8.69 15.31,6 12,6M12,16C9.79,16 8,14.21 8,12C8,9.79 9.79,8 12,8C14.21,8 16,9.79 16,12C16,14.21 14.21,16 12,16Z"/>
         </svg>
       ),
       skills: [
         { 
-          name: "MySQL", 
+          name: "Linux", 
           level: "Intermediate", 
-          experience: "1+ year",
-          projects: ["Equipment Database", "Data Management"],
-          description: "Database design, queries, relationships, XAMPP setup"
-        },
-        { 
-          name: "MariaDB", 
-          level: "Basic", 
-          experience: "3 months",
-          projects: ["ToDo Application", "Learning Project"],
-          description: "Basic operations, data storage, simple queries"
+          experience: "2+ years",
+          projects: ["Ubuntu/Mint", "Kali Linux", "Development Environment"],
+          description: "Command line interface, system administration, GRUB/bootloader"
         },
         { 
           name: "Git", 
           level: "Intermediate", 
           experience: "2+ years",
-          projects: ["Version Control", "CI/CD Setup"],
-          description: "Code versioning, basic branching, GitHub Actions"
+          projects: ["Version Control", "Project Management"],
+          description: "Code versioning, collaboration, repository management"
         },
         { 
-          name: "Postman", 
+          name: "Docker", 
           level: "Basic", 
-          experience: "1+ year",
-          projects: ["API Testing", "Development Workflow"],
-          description: "API testing, request validation, debugging"
+          experience: "6 months",
+          projects: ["Development Environment", "Deployment"],
+          description: "Containerization for consistent development environments"
+        },
+        { 
+          name: "CLI Tools", 
+          level: "Intermediate", 
+          experience: "2+ years",
+          projects: ["System Configuration", "Automation"],
+          description: "Command line proficiency, shell scripting, system tools"
         }
       ]
     },
-    devops: {
-      title: "DevOps & Systems",
-      description: "Development environment and deployment experience.",
+    hardware: {
+      title: "Hardware & Diagnostics",
+      description: "Hardware troubleshooting and electronic component work.",
       icon: (
         <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12A10,10 0 0,0 12,2M12,4A8,8 0 0,1 20,12A8,8 0 0,1 12,20A8,8 0 0,1 4,12A8,8 0 0,1 12,4M12,6A6,6 0 0,0 6,12A6,6 0 0,0 12,18A6,6 0 0,0 18,12A6,6 0 0,0 12,6M12,8A4,4 0 0,1 16,12A4,4 0 0,1 12,16A4,4 0 0,1 8,12A4,4 0 0,1 12,8Z"/>
+          <path d="M9,2V8H11V11H9V13H15V11H13V8H15V2H9M12,4A1,1 0 0,1 13,5A1,1 0 0,1 12,6A1,1 0 0,1 11,5A1,1 0 0,1 12,4M8,10A2,2 0 0,0 6,12A2,2 0 0,0 8,14A2,2 0 0,0 10,12A2,2 0 0,0 8,10M16,10A2,2 0 0,0 14,12A2,2 0 0,0 16,14A2,2 0 0,0 18,12A2,2 0 0,0 16,10M12,11A1,1 0 0,1 13,12A1,1 0 0,1 12,13A1,1 0 0,1 11,12A1,1 0 0,1 12,11M7,18A2,2 0 0,0 5,20A2,2 0 0,0 7,22A2,2 0 0,0 9,20A2,2 0 0,0 7,18M17,18A2,2 0 0,0 15,20A2,2 0 0,0 17,22A2,2 0 0,0 19,20A2,2 0 0,0 17,18Z"/>
         </svg>
       ),
       skills: [
         { 
-          name: "Docker", 
+          name: "Circuit Troubleshooting", 
           level: "Intermediate", 
           experience: "1+ year",
-          projects: ["Application Deployment", "Development Environment"],
-          description: "Containerization, Docker Compose, basic orchestration"
+          projects: ["Mobile Repair", "Hardware Diagnostics"],
+          description: "Systematic debugging, component-level repair, hardware-software integration"
         },
         { 
-          name: "Linux", 
+          name: "Soldering & Rework", 
           level: "Intermediate", 
           experience: "1+ year",
-          projects: ["Server Setup", "Development Environment"],
-          description: "Linux Mint, Kali Linux, command line, server management"
+          projects: ["iPhone Face ID Repair", "Component Replacement"],
+          description: "Precision soldering, hot air rework, component replacement"
         },
         { 
-          name: "VS Code", 
-          level: "Advanced", 
-          experience: "3+ years",
-          projects: ["Daily Development", "All Projects"],
-          description: "Extensions, debugging, integrated terminal, productivity"
-        },
-        { 
-          name: "Vite.js", 
+          name: "Test Equipment", 
           level: "Intermediate", 
           experience: "1+ year",
-          projects: ["React Projects", "Build Tools"],
-          description: "Fast development, build optimization, modern tooling"
+          projects: ["Circuit Analysis", "Power Supply Testing"],
+          description: "Multimeter, power supply, oscilloscope basics, signal analysis"
+        },
+        { 
+          name: "Firmware & Bootloaders", 
+          level: "Intermediate", 
+          experience: "1+ year",
+          projects: ["Firmware Flashing", "Bootloader Bypass"],
+          description: "Low-level system recovery, firmware update procedures"
         }
       ]
     }
   };
 
-  // Technology icons data - simplified and realistic
+  // Technology icons data - robotics focused
   const techIcons = [
     { 
-      name: "React", 
-      icon: "⚛️", 
+      name: "ROS2", 
+      icon: "🤖", 
       color: "from-blue-400 to-blue-600",
       bgColor: "bg-blue-500/10 hover:bg-blue-500/20" 
     },
@@ -195,16 +195,16 @@ function Skills() {
       bgColor: "bg-yellow-500/10 hover:bg-yellow-500/20" 
     },
     { 
-      name: "MySQL", 
-      icon: "🗄️", 
-      color: "from-orange-400 to-red-600",
-      bgColor: "bg-orange-500/10 hover:bg-orange-500/20" 
+      name: "C/C++", 
+      icon: "⚡", 
+      color: "from-blue-400 to-purple-600",
+      bgColor: "bg-blue-500/10 hover:bg-blue-500/20" 
     },
     { 
-      name: "Docker", 
-      icon: "🐳", 
-      color: "from-blue-400 to-cyan-600",
-      bgColor: "bg-blue-500/10 hover:bg-blue-500/20" 
+      name: "ESP32", 
+      icon: "💾", 
+      color: "from-green-400 to-blue-600",
+      bgColor: "bg-green-500/10 hover:bg-green-500/20" 
     },
     { 
       name: "Linux", 
@@ -213,10 +213,22 @@ function Skills() {
       bgColor: "bg-gray-500/10 hover:bg-gray-500/20" 
     },
     { 
+      name: "Arduino", 
+      icon: "🔧", 
+      color: "from-teal-400 to-cyan-600",
+      bgColor: "bg-teal-500/10 hover:bg-teal-500/20" 
+    },
+    { 
       name: "Git", 
       icon: "📚", 
       color: "from-purple-400 to-purple-600",
       bgColor: "bg-purple-500/10 hover:bg-purple-500/20" 
+    },
+    { 
+      name: "Docker", 
+      icon: "🐳", 
+      color: "from-blue-400 to-cyan-600",
+      bgColor: "bg-blue-500/10 hover:bg-blue-500/20" 
     }
   ];
 
@@ -257,15 +269,16 @@ function Skills() {
             }`}
           >
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Technical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Skills</span>
+              Technical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Expertise</span>
             </h2>
             <div className="w-16 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-6"></div>
             <p className="text-gray-300 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto leading-relaxed">
-              Fresh graduate with hands-on experience in modern web development technologies and AI fundamentals.
+              Computer Science graduate with hands-on experience in robotics, embedded systems, and hardware-software integration. 
+              Currently developing autonomous robotics solutions using ROS2 and microcontroller programming.
             </p>
           </div>
 
-          {/* Skills Grid - All Categories */}
+          {/* Skills Grid - Robotics Categories */}
           <div 
             ref={skillsGridRef}
             className="max-w-7xl mx-auto mb-12 lg:mb-16"
@@ -316,6 +329,7 @@ function Skills() {
                             <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                               skill.level === 'Advanced' ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' :
                               skill.level === 'Intermediate' ? 'bg-green-500/20 text-green-400 border border-green-500/30' :
+                              skill.level === 'Learning' ? 'bg-orange-500/20 text-orange-400 border border-orange-500/30' :
                               'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
                             }`}>
                               {skill.level}
@@ -359,7 +373,7 @@ function Skills() {
           {/* Technology Icons Grid */}
           <div 
             ref={techIconsRef}
-            className="grid grid-cols-3 sm:grid-cols-6 gap-4 lg:gap-6 max-w-4xl mx-auto mb-16 lg:mb-20"
+            className="grid grid-cols-4 sm:grid-cols-8 gap-4 lg:gap-6 max-w-6xl mx-auto mb-16 lg:mb-20"
           >
             {techIcons.map((tech, index) => (
               <div
@@ -388,17 +402,17 @@ function Skills() {
           {/* Stats Section */}
           <div className="text-center mb-12">
             <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8">
-              Learning <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Journey</span>
+              Professional <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Profile</span>
             </h3>
           </div>
 
-          {/* Realistic Fresh Graduate Stats */}
+          {/* Professional Stats */}
           <div ref={statsRef} className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { number: "5+", label: "Projects Completed", icon: "🚀", desc: "University & personal" },
-              { number: "2", label: "Frameworks", icon: "⚡", desc: "React & Express" },
-              { number: "70%+", label: "Skill Improvement", icon: "📈", desc: "Since starting CS" },
-              { number: "3.23", label: "GPA", icon: "🎓", desc: "Computer Science" }
+              { number: "2024", label: "CS Graduate", icon: "🎓", desc: "Chulalongkorn University" },
+              { number: "5+", label: "Projects", icon: "🚀", desc: "Robotics & AI focus" },
+              { number: "3.23", label: "GPA", icon: "📊", desc: "Computer Science" },
+              { number: "Current", label: "Learning ROS2", icon: "🤖", desc: "Autonomous systems" }
             ].map((stat, index) => (
               <div
                 key={stat.label}

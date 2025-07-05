@@ -11,34 +11,41 @@ function AboutMe() {
     threshold: 0.2, 
     rootMargin: '0px 0px -100px 0px' 
   });
-  const [projectsRef, visibleProjects] = useStaggeredAnimation(3, {
+  const [projectsRef, visibleProjects] = useStaggeredAnimation(4, {
     threshold: 0.1,
     staggerDelay: 200
   });
 
   const recentProjects = [
     {
-      title: "Mobile Repair Shop Website",
-      type: "Freelance Project",
-      period: "2024",
-      description: "Responsive frontend website for a mobile phone repair shop. Focused on creating an intuitive user interface that works seamlessly on both desktop and mobile devices.",
-      tech: ["React", "Tailwind CSS", "Vite.js"]
+      title: "Smartphone Repair Technician",
+      type: "Professional Experience",
+      period: "Mar 2025 - Present",
+      description: "Performing hardware repairs and software troubleshooting. Specialized in iPhone Face ID repairs, bootloader bypass procedures, and systematic hardware-software integration debugging.",
+      tech: ["Hardware Repair", "Firmware", "Debugging", "System Integration"]
+    },
+    {
+      title: "Autonomous Cleaning Robot",
+      type: "Personal Project",
+      period: "2025 - Present",
+      description: "Learning ROS2 navigation concepts and SLAM implementation. Planning to integrate repurposed Xiaomi vacuum LiDAR sensor with ESP32 and Micro-ROS for cost-effective hardware interface.",
+      tech: ["ROS2", "SLAM", "ESP32", "Micro-ROS", "LiDAR"]
     },
     {
       title: "Equipment Management System",
-      type: "Final Year Project",
+      type: "Senior Project",
       period: "2024",
-      description: "Fullstack web application for equipment inventory management using React, Tailwind CSS, MySQL, and Strapi. Handled complete development cycle from requirements gathering to deployment.",
-      tech: ["React", "Tailwind CSS", "MySQL", "Strapi"]
+      description: "Developed web application using React frontend and Node.js backend. Deployed system for university department use with full-stack development and cloud deployment experience.",
+      tech: ["React", "Node.js", "Full-stack", "Cloud Deployment"]
     },
     {
-      title: "Vehicle & Barrier Detection AI",
-      type: "Term Project",
+      title: "Vehicle & Barrier Detection using YOLOv8",
+      type: "Academic Project",
       period: "2024",
-      description: "Computer vision project using YOLOv8 for detecting vehicles and barriers in images. Responsible for data labeling and model training with google map images.",
-      tech: ["YOLOv8", "Python", "Computer Vision"]
+      description: "Trained object detection model on manually labeled Google Maps imagery. Demonstrated computer vision concepts and machine learning model training.",
+      tech: ["YOLOv8", "Computer Vision", "Python", "Machine Learning"]
     },
-  
+    
   ];
 
   return (
@@ -77,65 +84,85 @@ function AboutMe() {
             }`}
             style={{ transitionDelay: '200ms' }}
           >
-            {/* Name */}
+            {/* Name & Title */}
             <div className="transform transition-all duration-700 delay-300">
-              <h3 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-4 lg:mb-6">
+              <h3 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-2 lg:mb-3">
                 Taschai Srilampung
               </h3>
+              <p className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4 lg:mb-6">
+                Robotics Software Engineer
+              </p>
             </div>
             
             {/* Description */}
             <div className="space-y-4 transform transition-all duration-700 delay-500">
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                Hi, I'm Taschai — I enjoy solving unique problems and learning new things. 
-                I'm a self-motivated learner with a strong interest in software development, AI, and Robotics.
+                Recent Computer Science graduate passionate about robotics and embedded systems. 
+                Self-taught in ROS2, microcontroller programming (Arduino, ESP32), and Linux environments.
               </p>
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                As an INTP-T personality, I love diving deep into complex problems and finding innovative solutions. 
-                My curiosity drives me to constantly explore new technologies and challenge myself with diverse projects.
+                Experienced in mobile device repair and systematic hardware-software troubleshooting. 
+                Currently building autonomous robotics projects involving SLAM and sensor integration.
               </p>
-              <p className="text-purple-300 text-sm sm:text-base lg:text-lg font-medium italic">
-                "It always seems impossible until it is done." - Nelson Mandela
+              <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
+                Seeking opportunities to apply and expand technical skills in robotics software engineering, 
+                combining theoretical knowledge with hands-on problem-solving experience.
               </p>
             </div>
             
             {/* Contact Info Grid */}
             <div className="grid sm:grid-cols-2 gap-4 lg:gap-6 pt-4 transform transition-all duration-700 delay-700">
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
-                <p className="text-gray-400 text-sm font-medium">Name:</p>
-                <p className="text-white text-sm lg:text-base">Taschai Srilampung</p>
+                <p className="text-gray-400 text-sm font-medium">Education:</p>
+                <p className="text-white text-sm lg:text-base">B.S. Computer Science</p>
+                <p className="text-gray-300 text-xs lg:text-sm">Chulalongkorn University (GPA: 3.23)</p>
               </div>
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
                 <p className="text-gray-400 text-sm font-medium">Email:</p>
                 <p className="text-white text-sm lg:text-base">taschai.sr@gmail.com</p>
               </div>
               <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
-                <p className="text-gray-400 text-sm font-medium">Education:</p>
-                <p className="text-white text-sm lg:text-base">Chulalongkorn University</p>
-              </div>
-              <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
                 <p className="text-gray-400 text-sm font-medium">Location:</p>
                 <p className="text-white text-sm lg:text-base">Bangkok, Thailand</p>
+              </div>
+              <div className="space-y-2 hover:transform hover:scale-105 transition-transform duration-300">
+                <p className="text-gray-400 text-sm font-medium">LinkedIn:</p>
+                <p className="text-white text-sm lg:text-base">Taschai Srilampung</p>
+              </div>
+            </div>
+
+            {/* Key Skills */}
+            <div className="transform transition-all duration-700 delay-800">
+              <h4 className="text-lg font-semibold text-purple-400 mb-3">Core Technologies</h4>
+              <div className="flex flex-wrap gap-2">
+                {["ROS2", "ESP32", "Arduino", "Python", "C/C++", "Linux", "SLAM", "Computer Vision"].map((skill, index) => (
+                  <span 
+                    key={index}
+                    className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30 hover:bg-purple-500/30 transition-colors duration-300"
+                  >
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
             
             {/* Contact Button */}
             <div className="pt-4 transform transition-all duration-700 delay-900">
-            <a 
-  href="#contact"
-  className="inline-block group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 lg:px-8 py-3 lg:py-3.5 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm lg:text-base shadow-lg hover:shadow-purple-500/25"
->
-  <span className="flex items-center gap-2">
-    Contact Me
-    <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-    </svg>
-  </span>
-</a>
+              <a 
+                href="#contact"
+                className="inline-block group bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 lg:px-8 py-3 lg:py-3.5 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm lg:text-base shadow-lg hover:shadow-purple-500/25"
+              >
+                <span className="flex items-center gap-2">
+                  Contact Me
+                  <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  </svg>
+                </span>
+              </a>
             </div>
           </div>
 
-          {/* Right Column - Recent Projects */}
+          {/* Right Column - Projects & Experience */}
           <div 
             ref={rightColumnRef}
             className={`space-y-6 transform transition-all duration-1000 ${
@@ -146,7 +173,7 @@ function AboutMe() {
             style={{ transitionDelay: '400ms' }}
           >
             <h3 className="text-2xl sm:text-3xl font-bold text-purple-400 mb-6 lg:mb-8">
-              Recent Projects
+              Projects & Experience
             </h3>
             
             {/* Projects Timeline */}

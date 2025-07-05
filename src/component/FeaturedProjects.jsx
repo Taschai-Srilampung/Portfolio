@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-// ลบ import hooks ที่ไม่มี - ใช้ intersection observer แทน
 
-// Custom SVG Icons (เหมือนเดิม)
+// Custom SVG Icons
 const ExternalLinkIcon = () => (
   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
@@ -27,9 +26,16 @@ const CodeIcon = () => (
   </svg>
 );
 
-const ZapIcon = () => (
+const CogIcon = () => (
   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+  </svg>
+);
+
+const RobotIcon = () => (
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" />
   </svg>
 );
 
@@ -39,15 +45,16 @@ const DatabaseIcon = () => (
   </svg>
 );
 
-const MonitorIcon = () => (
-  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-  </svg>
-);
-
 const BrainIcon = () => (
   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+  </svg>
+);
+
+const WrenchIcon = () => (
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
   </svg>
 );
 
@@ -122,7 +129,7 @@ function FeaturedProjects() {
   // Animation hooks
   const [headerRef, isHeaderVisible] = useScrollAnimation();
   const [filtersRef, isFiltersVisible] = useScrollAnimation();
-  const [projectsRef, visibleProjects] = useStaggeredAnimation(4, {
+  const [projectsRef, visibleProjects] = useStaggeredAnimation(5, {
     threshold: 0.2,
     staggerDelay: 200
   });
@@ -131,172 +138,231 @@ function FeaturedProjects() {
     staggerDelay: 150
   });
 
-  // Projects data
+  // Projects data based on actual resume
   const projects = [
     {
       id: 1,
-      title: "Equipment Management System",
-      category: "Full Stack",
-      type: "Final Project",
-      description: "A comprehensive equipment management system for tracking and managing organizational assets with role-based access control and real-time updates.",
-      longDescription: "Built as my final year project, this full-stack application handles equipment inventory, user management, and reporting with modern web technologies.",
-      image: "🏢",
-      technologies: ["React", "Vite", "Tailwind CSS", "Ant Design", "Strapi", "MySQL"],
+      title: "Autonomous Cleaning Robot",
+      category: "Robotics",
+      type: "In Development",
+      description: "Developing an autonomous cleaning robot using ROS2 navigation and SLAM implementation with repurposed Xiaomi vacuum LiDAR sensor and ESP32 microcontroller.",
+      longDescription: "Currently building an autonomous cleaning robot that integrates ROS2 navigation concepts with practical hardware solutions. This project focuses on cost-effective robotics implementation using ESP32 and Micro-ROS.",
+      image: "🤖",
+      technologies: ["ROS2", "SLAM", "ESP32", "Micro-ROS", "LiDAR", "C++"],
       features: [
-        "Equipment tracking and inventory",
-        "Role-based user management",
-        "Real-time data updates",
-        "Responsive design",
-        "Search and filtering system"
+        "ROS2 navigation implementation",
+        "SLAM mapping and localization",
+        "ESP32 with Micro-ROS integration",
+        "Repurposed Xiaomi vacuum LiDAR",
+        "Cost-effective hardware design",
+        "Autonomous navigation system"
       ],
       metrics: {
-        role: "Full Stack",
-        duration: "6 months",
-        status: "Live Demo"
+        role: "Robotics Engineer",
+        duration: "Ongoing",
+        status: "Development"
       },
-      timeline: "6 months",
-      team: "Individual project",
-      role: "Full Stack Developer",
+      timeline: "2025 - Present",
+      team: "Personal Project",
+      role: "Robotics Software Engineer",
       challenges: [
-        "Implementing complex search functionality",
-        "Managing server resources and deployment",
-        "Designing intuitive user interface"
+        "Implementing SLAM algorithms efficiently",
+        "ESP32 resource optimization for ROS2",
+        "LiDAR sensor integration and calibration",
+        "Cost-effective hardware selection"
       ],
       achievements: [
-        "Successfully deployed with Docker",
-        "Implemented complete CRUD operations",
-        "Created responsive design for all devices"
+        "Successfully testing ROS2 nodes on ESP32",
+        "Servo motor integration with microcontroller",
+        "Learning advanced robotics concepts",
+        "Building practical robotics experience"
       ],
-      demoUrl: "https://www.myryolife.tech/docker-project/",
-      githubUrl: "https://github.com/Taschai-Srilampung",
-      gradient: "from-blue-600 to-purple-600",
-      icon: DatabaseIcon,
-      credentials: {
-        admin: { username: "Admin", password: "Admin1234" },
-        user: { username: "User", password: "User1234" }
-      }
+      demoUrl: null,
+      githubUrl: null,
+      gradient: "from-blue-600 to-cyan-600",
+      icon: RobotIcon,
+      priority: 1
     },
     {
       id: 2,
-      title: "Mobile Repair Shop Website",
-      category: "Frontend",
-      type: "Freelance",
-      description: "A responsive website for a local mobile repair shop featuring service information, contact details, and modern design optimized for both desktop and mobile.",
-      longDescription: "Developed as a freelance project for a local mobile repair shop, focusing on responsive design and user-friendly interface.",
-      image: "📱",
-      technologies: ["React", "Vite", "Tailwind CSS"],
-      features: [
-        "Responsive design",
-        "Service showcase",
-        "Contact information",
-        "Mobile-first approach",
-        "Fast loading performance"
-      ],
-      metrics: {
-        role: "Frontend",
-        duration: "5 days",
-        status: "Deployed"
-      },
-      timeline: "5 days",
-      team: "Individual project",
-      role: "Frontend Developer",
-      challenges: [
-        "Creating responsive design across all devices",
-        "Optimizing for mobile performance",
-        "Managing client requirements"
-      ],
-      achievements: [
-        "Delivered responsive design for all screen sizes",
-        "Improved business online presence",
-        "Successfully deployed and maintained"
-      ],
-      demoUrl: "#",
-      githubUrl: "https://github.com/Taschai-Srilampung",
-      gradient: "from-green-600 to-teal-600",
-      icon: MonitorIcon
-    },
-    {
-      id: 3,
-      title: "AI Vehicle & Barrier Detection",
+      title: "Vehicle & Barrier Detection using YOLOv8",
       category: "AI/ML",
-      type: "Term Project",
-      description: "An AI-powered system using YOLOv8 for detecting vehicles and barriers in images, trained on custom dataset for traffic monitoring applications.",
-      longDescription: "Developed an object detection system using YOLO architecture for identifying vehicles and traffic barriers in various environments.",
+      type: "Computer Vision",
+      description: "Trained YOLOv8 object detection model on manually labeled Google Maps imagery for vehicle and barrier detection in traffic monitoring applications.",
+      longDescription: "Developed a computer vision system using YOLOv8 architecture to detect vehicles and barriers from satellite imagery, demonstrating practical application of deep learning in transportation systems.",
       image: "🚗",
-      technologies: ["Python", "YOLOv8", "Computer Vision"],
+      technologies: ["Python", "YOLOv8", "Computer Vision", "Google Colab", "Data Labeling"],
       features: [
-        "Vehicle detection and classification",
-        "Barrier identification",
-        "Custom dataset training",
-        "Real-time processing",
-        "Accuracy optimization"
+        "Custom YOLOv8 model training",
+        "Manual data labeling and annotation",
+        "Vehicle classification and detection",
+        "Barrier identification system",
+        "Google Maps imagery processing",
+        "Real-time inference capability"
       ],
       metrics: {
         role: "ML Engineer",
-        duration: "2 weeks",
-        status: "Research"
+        duration: "2024",
+        status: "Completed"
       },
-      timeline: "2 weeks",
-      team: "Group project",
-      role: "Data Labeling & Model Training",
+      timeline: "2024",
+      team: "Academic Project",
+      role: "Computer Vision Developer",
       challenges: [
         "Limited training data from single source",
-        "Improving model accuracy",
+        "Manual annotation of complex scenes",
+        "Model accuracy optimization",
         "Handling various lighting conditions"
       ],
       achievements: [
         "Successfully trained custom YOLO model",
-        "Achieved satisfactory detection accuracy",
-        "Learned end-to-end ML workflow"
+        "Implemented complete ML pipeline",
+        "Gained practical computer vision experience",
+        "Demonstrated object detection capabilities"
       ],
-      demoUrl: "#",
-      githubUrl: "https://github.com/Taschai-Srilampung",
+      demoUrl: null,
+      githubUrl: "https://colab.research.google.com/drive/1Ai-MYwRs-jY_zDxvRLhr5RRweeF7yAjW?authuser=1",
       gradient: "from-orange-600 to-red-600",
-      icon: BrainIcon
+      icon: BrainIcon,
+      priority: 2
     },
     {
-      id: 4,
+      id: 3,
       title: "Bird Species Classification AI",
       category: "AI/ML",
-      type: "Term Project",
-      description: "A machine learning model using MobileNet architecture to classify bird species from images, optimized for mobile deployment and efficiency.",
-      longDescription: "Built an image classification system to identify different bird species using transfer learning with MobileNet architecture.",
+      type: "Deep Learning",
+      description: "Implemented transfer learning using MobileNet architecture to classify bird species from images, optimized for mobile deployment with efficient training strategies.",
+      longDescription: "Developed an image classification system using MobileNet architecture to identify different bird species, focusing on transfer learning techniques and mobile optimization for practical deployment.",
       image: "🐦",
-      technologies: ["Python", "MobileNet", "TensorFlow", "Image Processing"],
+      technologies: ["Python", "MobileNet", "TensorFlow", "Transfer Learning", "Google Colab"],
       features: [
-        "Bird species classification",
         "Transfer learning implementation",
-        "Mobile-optimized model",
-        "Image preprocessing",
-        "Multi-class prediction"
+        "MobileNet architecture optimization",
+        "Multi-class bird species classification",
+        "Mobile-optimized model design",
+        "Efficient training strategies",
+        "Image preprocessing pipeline"
       ],
       metrics: {
         role: "ML Developer",
-        duration: "2 months",
-        status: "Research"
+        duration: "2024",
+        status: "Completed"
       },
-      timeline: "2 months",
-      team: "Pair programming",
-      role: "Model Developer",
+      timeline: "2024",
+      team: "Pair Programming",
+      role: "Deep Learning Engineer",
       challenges: [
         "Long training times on limited hardware",
-        "Google Colab session interruptions",
-        "Optimizing model for mobile use"
+        "Google Colab session management",
+        "Mobile deployment optimization",
+        "Transfer learning fine-tuning"
       ],
       achievements: [
-        "Implemented transfer learning successfully",
+        "Implemented successful transfer learning",
         "Developed epoch-based training strategy",
-        "Learned mobile ML optimization techniques"
+        "Optimized model for mobile deployment",
+        "Gained deep learning expertise"
       ],
-      demoUrl: "#",
-      githubUrl: "https://github.com/Taschai-Srilampung",
+      demoUrl: null,
+      githubUrl: "https://colab.research.google.com/drive/1abag3KMJcmAqRAqOLkUCGEHvYfbM8Vv0?authuser=1",
       gradient: "from-purple-600 to-pink-600",
-      icon: BrainIcon
+      icon: BrainIcon,
+      priority: 3
+    },
+    {
+      id: 4,
+      title: "Equipment Management System",
+      category: "Full Stack",
+      type: "Senior Project",
+      description: "Developed a comprehensive equipment management system using React and Node.js, deployed on personal cloud infrastructure for organizational asset tracking.",
+      longDescription: "Built a full-stack web application for equipment inventory management with role-based access control, deployed on personal cloud infrastructure rather than university systems.",
+      image: "🏢",
+      technologies: ["React", "Node.js", "MySQL", "Docker", "Cloud Deployment", "REST API"],
+      features: [
+        "Equipment inventory tracking",
+        "Role-based access control",
+        "Real-time data updates",
+        "Responsive web interface",
+        "Cloud deployment with Docker",
+        "RESTful API design"
+      ],
+      metrics: {
+        role: "Full Stack",
+        duration: "2024",
+        status: "Deployed"
+      },
+      timeline: "2024",
+      team: "Individual Project",
+      role: "Full Stack Developer",
+      challenges: [
+        "Complex database design",
+        "Personal cloud infrastructure setup",
+        "Docker containerization",
+        "System scalability considerations"
+      ],
+      achievements: [
+        "Successfully deployed on personal cloud",
+        "Implemented complete CRUD operations",
+        "Gained cloud deployment experience",
+        "Demonstrated full-stack capabilities"
+      ],
+      demoUrl: "https://www.myryolife.tech/docker-project/",
+      githubUrl: "https://github.com/Taschai-Srilampung/equipment-project-myserver",
+      gradient: "from-green-600 to-teal-600",
+      icon: DatabaseIcon,
+      credentials: {
+        admin: { username: "Admin", password: "Admin1234" },
+        user: { username: "User", password: "User1234" }
+      },
+      priority: 4
+    },
+    {
+      id: 5,
+      title: "Hardware Repair & Diagnostics",
+      category: "Hardware",
+      type: "Professional Experience",
+      description: "Smartphone repair technician specializing in hardware repairs, firmware flashing, and systematic troubleshooting of hardware-software integration issues.",
+      longDescription: "Professional experience in mobile device repair including complex hardware repairs, firmware operations, and systematic debugging approaches for hardware-software integration issues.",
+      image: "📱",
+      technologies: ["Hardware Repair", "Firmware", "Diagnostic Tools", "Soldering", "Troubleshooting"],
+      features: [
+        "Screen and battery replacement",
+        "Component-level diagnostics",
+        "Firmware flashing and recovery",
+        "iPhone Face ID repair",
+        "Bootloader bypass procedures",
+        "Systematic troubleshooting"
+      ],
+      metrics: {
+        role: "Technician",
+        duration: "2025-Present",
+        status: "Active"
+      },
+      timeline: "Mar 2025 - Present",
+      team: "Khumsup Mobile Repair",
+      role: "Smartphone Repair Technician",
+      challenges: [
+        "Complex component-level repairs",
+        "Firmware recovery procedures",
+        "Hardware-software integration issues",
+        "Precision work with small components"
+      ],
+      achievements: [
+        "Specialized in iPhone Face ID repairs",
+        "Weekly firmware operations",
+        "Systematic debugging approach",
+        "Professional repair experience"
+      ],
+      demoUrl: null,
+      githubUrl: null,
+      gradient: "from-gray-600 to-slate-600",
+      icon: WrenchIcon,
+      priority: 5
     }
   ];
 
-  // Filter categories
-  const allCategories = ['All', 'Full Stack', 'Frontend', 'AI/ML', 'Backend', 'Robotics', 'Cybersecurity'];
+  // Filter categories prioritizing robotics and AI/ML
+  const allCategories = ['All', 'Robotics', 'AI/ML', 'Hardware', 'Full Stack'];
   const categories = allCategories.filter(category => {
     if (category === 'All') return true;
     return projects.some(project => project.category === category);
@@ -304,46 +370,47 @@ function FeaturedProjects() {
 
   // Filter projects based on active filter
   const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === activeFilter);
+  ? [...projects].sort((a, b) => a.priority - b.priority)
+  : projects.filter(project => project.category === activeFilter).sort((a, b) => a.priority - b.priority);
 
   // Limit displayed projects unless showing all
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
   const hasMoreProjects = filteredProjects.length > 4;
 
-  // Project statistics
+  // Project statistics focused on robotics and AI
   const projectStats = [
     {
-      number: "5+",
-      label: "Projects Completed",
-      description: "Academic and freelance projects"
-    },
-    {
       number: "2",
-      label: "Frameworks",
-      description: "React & Express experience"
-    },
-    {
-      number: "70%",
-      label: "Skill Improvement",
-      description: "Since starting my journey"
+      label: "AI/ML Projects",
+      description: "Computer Vision & Deep Learning"
     },
     {
       number: "1",
-      label: "Live Deployment",
-      description: "Production-ready application"
+      label: "Robotics Project",
+      description: "ROS2 & Autonomous Systems"
+    },
+    {
+      number: "3+",
+      label: "Programming Languages",
+      description: "Python, C++, JavaScript"
+    },
+    {
+      number: "2025",
+      label: "Career Focus",
+      description: "Robotics Software Engineer"
     }
   ];
 
   return (
     <section id="projects">
-      <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-16 lg:py-24 relative overflow-hidden">
+   <div className="min-h-screen bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 py-16 lg:py-24 relative overflow-hidden">
         {/* Background Effects */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
-        </div>
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-pink-500/5 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/5 rounded-full blur-3xl animate-pulse delay-2000"></div>
+      </div>
+
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-20 relative z-10">
           {/* Header Section */}
@@ -356,12 +423,12 @@ function FeaturedProjects() {
             }`}
           >
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
-              My <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Projects</span>
+              Featured <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Projects</span>
             </h1>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8"></div>
             <p className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed">
-              A collection of projects I've worked on during my studies and early career, showcasing my learning journey 
-              in web development, AI, and software engineering.
+              A showcase of my robotics, AI/ML, and software engineering projects. From autonomous robots to computer vision systems, 
+              these projects demonstrate my passion for robotics software development and embedded systems.
             </p>
           </div>
 
@@ -380,7 +447,7 @@ function FeaturedProjects() {
                 onClick={() => setActiveFilter(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 transform hover:scale-105 ${
                   activeFilter === category
-                    ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25'
+                    ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/25'
                     : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 hover:text-white border border-gray-600/50'
                 }`}
               >
@@ -401,10 +468,10 @@ function FeaturedProjects() {
                   key={project.id}
                   data-index={index}
                   className={`group bg-gray-800/30 backdrop-blur-sm rounded-2xl overflow-hidden border border-gray-700/50 hover:border-purple-500/50 transition-all duration-700 transform hover:scale-[1.02] hover:shadow-2xl hover:shadow-purple-500/10 ${
-                    visibleProjects.has(index)
+                    visibleProjects.has(index) || showAll
                       ? 'translate-y-0 opacity-100' 
                       : 'translate-y-12 opacity-0'
-                  }`}
+                  }`} 
                   style={{
                     transitionDelay: `${index * 200}ms`
                   }}
@@ -451,7 +518,7 @@ function FeaturedProjects() {
                         {project.technologies.map((tech, techIndex) => (
                           <span
                             key={techIndex}
-                            className="px-3 py-1 bg-purple-500/10 text-purple-300 rounded-full text-xs border border-purple-500/20 hover:bg-purple-500/20 transition-colors"
+                            className="px-3 py-1 bg-blue-500/10 text-blue-300 rounded-full text-xs border border-blue-500/20 hover:bg-blue-500/20 transition-colors"
                           >
                             {tech}
                           </span>
@@ -462,13 +529,13 @@ function FeaturedProjects() {
                     {/* Key Features */}
                     <div>
                       <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                        <ZapIcon />
+                        <CogIcon />
                         Key Features
                       </h4>
                       <ul className="space-y-1">
                         {project.features.slice(0, 3).map((feature, featureIndex) => (
                           <li key={featureIndex} className="text-gray-300 text-sm flex items-center gap-2">
-                            <div className="w-1 h-1 bg-purple-400 rounded-full"></div>
+                            <div className="w-1 h-1 bg-blue-400 rounded-full"></div>
                             {feature}
                           </li>
                         ))}
@@ -481,7 +548,7 @@ function FeaturedProjects() {
                       <div className="grid grid-cols-3 gap-4">
                         {Object.entries(project.metrics).map(([key, value]) => (
                           <div key={key} className="text-center">
-                            <div className="text-sm font-bold text-purple-400">{value}</div>
+                            <div className="text-sm font-bold text-blue-400">{value}</div>
                             <div className="text-xs text-gray-500 capitalize">{key.replace(/([A-Z])/g, ' $1')}</div>
                           </div>
                         ))}
