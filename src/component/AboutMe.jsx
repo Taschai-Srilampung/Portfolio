@@ -88,7 +88,7 @@ function AboutMe() {
             <div className="space-y-4 transform transition-all duration-700 delay-500">
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
                 Hi, I'm Taschai — I enjoy solving unique problems and learning new things. 
-                I'm a self-motivated learner with a strong interest in software development, AI, and cybersecurity.
+                I'm a self-motivated learner with a strong interest in software development, AI, and Robotics.
               </p>
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
                 As an INTP-T personality, I love diving deep into complex problems and finding innovative solutions. 
