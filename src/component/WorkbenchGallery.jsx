@@ -56,7 +56,7 @@ function WorkbenchGallery() {
   const autoSlideTimerRef = useRef(null);
   const [headerRef, isHeaderVisible] = useScrollAnimation();
 
-  // Gallery items with captions - IMAGES FIRST, then VIDEOS
+  // Gallery items with captions - IMAGES FIRST, then YOUTUBE VIDEOS
   const galleryItems = [
     // Images
     {
@@ -94,18 +94,18 @@ function WorkbenchGallery() {
       caption: 'Dev Environment: Arduino IDE & ESP32 Testing',
       alt: 'Arduino IDE and ESP32 testing'
     },
-    // Videos
+    // YouTube Videos
     {
       id: 1,
-      type: 'video',
-      src: '/src/assets/ทำรถบังคับด้วยมือถือผ่านwifiด้วยesp32.mp4',
+      type: 'youtube',
+      id: 'oZHkCvXODiU',
       caption: 'IoT Project: WiFi-controlled RC Car using ESP32',
       alt: 'WiFi controlled RC car demo'
     },
     {
       id: 2,
-      type: 'video',
-      src: '/src/assets/ความคุม servo ด้วย remote control IR.mp4',
+      type: 'youtube',
+      id: 'tHGP9oJpWbw',
       caption: 'Embedded Control: IR Remote & Servo Motor Test',
       alt: 'IR remote servo motor test'
     }
@@ -219,7 +219,15 @@ function WorkbenchGallery() {
           >
             {/* Media Content */}
             <div className="relative w-full h-full">
-              {currentItem.type === 'video' ? (
+              {currentItem.type === 'youtube' ? (
+                <iframe
+                  src={`https://www.youtube.com/embed/${currentItem.id}?rel=0&modestbranding=1`}
+                  className="w-full h-full object-contain bg-black"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  title={currentItem.alt}
+                />
+              ) : currentItem.type === 'video' ? (
                 <video
                   ref={(el) => {
                     if (el) videoRefs.current[currentIndex] = el;
@@ -240,7 +248,7 @@ function WorkbenchGallery() {
                 />
               )}
 
-              {/* Play Button Overlay for Videos (when not playing) */}
+              {/* Play Button Overlay for Local Videos (when not playing) */}
               {currentItem.type === 'video' && isPlaying !== currentIndex && (
                 <div 
                   className="absolute inset-0 bg-black/40 flex items-center justify-center cursor-pointer hover:bg-black/50 transition-colors pointer-events-auto"
@@ -271,7 +279,7 @@ function WorkbenchGallery() {
             </button>
 
             {/* Video Badge */}
-            {currentItem.type === 'video' && (
+            {(currentItem.type === 'video' || currentItem.type === 'youtube') && (
               <div className="absolute top-4 left-4 bg-red-600/80 text-white px-3 py-1 rounded-full text-sm font-medium z-30">
                 Video
               </div>
@@ -301,7 +309,7 @@ function WorkbenchGallery() {
                 }`}
                 aria-label={`Go to slide ${index + 1}`}
               >
-                {item.type === 'video' ? (
+                {item.type === 'video' || item.type === 'youtube' ? (
                   <div className="w-full h-full bg-gray-800 flex items-center justify-center">
                     <svg className="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z" />
