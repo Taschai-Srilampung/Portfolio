@@ -6,6 +6,7 @@ import Header from './component/header'
 import ScrollIndicator from './component/ScrollIndicator'
 import HeroSection from './component/HeroSection'
 import AboutMe from './component/AboutMe'
+import WorkbenchGallery from './component/WorkbenchGallery'
 import Skills from './component/Skills'
 import FeaturedProjects from './component/FeaturedProjects'
 import Contact from './component/Contact'
@@ -32,6 +33,7 @@ function App() {
       <Header />
       <HeroSection />
       <AboutMe />
+      <WorkbenchGallery />
       <Skills />
       <FeaturedProjects />
       <Contact />
