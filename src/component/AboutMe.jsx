@@ -18,6 +18,13 @@ function AboutMe() {
 
   const recentProjects = [
     {
+      title: "R&D Technician (Confidential Project)",
+      type: "Professional Experience",
+      period: "Nov 2025 - Present",
+      description: "Prototype Assembly: Hands-on assembly of Raspberry Pi units, researching GPIO pinouts, and wiring sensors based on component specifications. System Setup: Installed OS and configured software environments for testing purposes. Testing & Support: Conducted functional tests and assisted engineers in troubleshooting hardware-software integration issues.",
+      tech: ["Raspberry Pi", "GPIO", "Sensor Integration", "System Configuration", "Hardware Testing"]
+    },
+    {
       title: "Smartphone Repair Technician",
       type: "Professional Experience",
       period: "Mar 2025 - Present",
@@ -97,16 +104,10 @@ function AboutMe() {
             {/* Description */}
             <div className="space-y-4 transform transition-all duration-700 delay-500">
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                Recent Computer Science graduate passionate about robotics and embedded systems. 
-                Self-taught in ROS2, microcontroller programming (Arduino, ESP32), and Linux environments.
+                Computer Science graduate and Robotics Software Engineer with a hands-on "Maker" mindset. Currently working as an R&D Technician, where I bridge the gap between high-level software and physical hardware. My work involves building Raspberry Pi prototypes, researching GPIO pinouts, and troubleshooting complex hardware-software integrations.
               </p>
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                Experienced in mobile device repair and systematic hardware-software troubleshooting. 
-                Currently building autonomous robotics projects involving SLAM and sensor integration.
-              </p>
-              <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                Seeking opportunities to apply and expand technical skills in robotics software engineering, 
-                combining theoretical knowledge with hands-on problem-solving experience.
+                With a background in mobile device repair, I bring a unique advantage in systematic diagnosis and component-level troubleshooting. I am passionate about ROS2, Embedded Systems, and IoT, constantly seeking to apply my technical skills to create innovative solutions and share knowledge with the maker community.
               </p>
             </div>
             

@@ -28,7 +28,7 @@ function HeroSection() {
             </h1>
             <TypewriterText />
             <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Computer Science graduate passionate about robotics and embedded systems. Experienced in ROS2, microcontroller programming, and autonomous systems development with hands-on hardware troubleshooting skills.
+              Computer Science graduate specializing in Robotics, ROS2, and Embedded Systems. Passionate about bridging the gap between high-level software and hands-on hardware making. Experienced in system integration, Raspberry Pi, and troubleshooting.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
               <a

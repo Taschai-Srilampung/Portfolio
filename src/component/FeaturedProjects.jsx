@@ -306,7 +306,7 @@ function FeaturedProjects() {
         "Gained cloud deployment experience",
         "Demonstrated full-stack capabilities"
       ],
-      demoUrl: "https://www.myryolife.tech/docker-project/",
+      demoUrl: null,
       githubUrl: "https://github.com/Taschai-Srilampung/equipment-project-myserver",
       gradient: "from-green-600 to-teal-600",
       icon: DatabaseIcon,

@@ -97,6 +97,20 @@ function Skills() {
           experience: "1+ year",
           projects: ["Servo Motor Control", "Sensor Projects"],
           description: "Hardware prototyping, sensor integration, motor control"
+        },
+        { 
+          name: "Raspberry Pi", 
+          level: "Intermediate", 
+          experience: "Current",
+          projects: ["R&D Prototype Assembly", "Autonomous Robot", "OS Configuration"],
+          description: "GPIO pinout research, prototype assembly, system setup and configuration"
+        },
+        { 
+          name: "GPIO & Sensor Integration", 
+          level: "Intermediate", 
+          experience: "Current",
+          projects: ["R&D Technician Role", "Sensor Wiring", "Hardware Testing"],
+          description: "GPIO pinout mapping, sensor circuit design, wiring based on component specifications"
         }
       ]
     },
@@ -229,6 +243,18 @@ function Skills() {
       icon: "🐳", 
       color: "from-blue-400 to-cyan-600",
       bgColor: "bg-blue-500/10 hover:bg-blue-500/20" 
+    },
+    { 
+      name: "Raspberry Pi", 
+      icon: "🥧", 
+      color: "from-red-400 to-red-600",
+      bgColor: "bg-red-500/10 hover:bg-red-500/20" 
+    },
+    { 
+      name: "GPIO", 
+      icon: "🔌", 
+      color: "from-orange-400 to-red-600",
+      bgColor: "bg-orange-500/10 hover:bg-orange-500/20" 
     }
   ];
 
