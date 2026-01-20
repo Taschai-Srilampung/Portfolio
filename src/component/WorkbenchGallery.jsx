@@ -85,7 +85,7 @@ function WorkbenchGallery() {
       id: 5,
       type: 'image',
       src: imgRobotFinal,
-      caption: 'Autonomous Robot: Final Assembly',
+      caption: 'RC Robot: Final Assembly',
       alt: 'Robot final assembly'
     },
     {
