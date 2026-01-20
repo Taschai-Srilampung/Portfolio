@@ -1,4 +1,47 @@
 @import "tailwindcss";
+
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  /* Optimize for animations */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Optimize animations to use GPU acceleration */
+@supports (will-change: transform) {
+  .animate-bounce,
+  .animate-pulse,
+  .animate-ping {
+    will-change: transform, opacity;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
+}
+
+/* Optimize scroll performance */
+body {
+  overscroll-behavior-y: contain;
+}
+
+/* Prevent layout thrashing during animations */
+.will-change-transform {
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-contents {
+  will-change: contents;
+}
+
+/* Optimize backdrop blur performance */
+.backdrop-blur-sm,
+.backdrop-blur-md {
+  /* Reduce blur radius for better performance */
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}

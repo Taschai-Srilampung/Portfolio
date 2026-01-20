@@ -5,22 +5,22 @@ import { ChevronDown, Download } from 'lucide-react';
 import profileImg from '../assets/profile.jpg';
 import fileResume from '../assets/Taschai_Resume.pdf';
 
-function HeroSection() {
+const HeroSection = React.memo(() => {
   return (
     <div className="bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-20 left-20 w-32 h-32 md:w-72 md:h-72 bg-purple-500/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-20 right-20 w-40 h-40 md:w-96 md:h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+      {/* Background effects - optimized with will-change */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-20 w-32 h-32 md:w-72 md:h-72 bg-purple-500/10 rounded-full blur-3xl will-change-transform"></div>
+        <div className="absolute bottom-20 right-20 w-40 h-40 md:w-96 md:h-96 bg-blue-500/10 rounded-full blur-3xl will-change-transform"></div>
       </div>
       {/* Main content wrapper with full screen height */}
-      <div className="relative z-10 flex flex-col justify-center gap-10 min-h-screen pt-16 md:pt-20 pb-24">
+      <div className="relative z-10 flex flex-col justify-center gap-10 min-h-screen pt-16 md:pt-20 pb-24 will-change-contents">
         <div className="container mx-auto px-4 sm:px-6 lg:px-20 flex-1 flex flex-col lg:flex-row items-center justify-between">
           
           {/* Left content */}
-          <div className="flex-1 max-w-2xl text-center lg:text-left mb-8 lg:mb-0">
+          <div className="flex-1 max-w-2xl text-center lg:text-left mb-8 lg:mb-0 will-change-contents">
             <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Robotics Software Engineer</p>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight will-change-contents">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 Taschai
@@ -33,7 +33,7 @@ function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
               <a
                 href="#projects"
-                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center"
+                className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center will-change-transform"
               >
                 View My Projects
               </a>
@@ -41,7 +41,7 @@ function HeroSection() {
                 href={fileResume}
                 download="Taschai_Srilampung_Resume.pdf"
                 target="_blank"
-                className="group border border-white/30 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center"
+                className="group border border-white/30 text-white px-6 md:px-8 py-2.5 md:py-3 rounded-full font-semibold hover:bg-white/10 transition-all duration-300 transform hover:scale-105 text-sm md:text-base text-center will-change-transform"
               >
                 <div className="flex items-center justify-center gap-2">
                   <span className="font-bold">Get My Resume</span>
@@ -51,7 +51,7 @@ function HeroSection() {
             </div>
           </div>
           {/* Right content - Profile circle */}
-          <div className="flex-shrink-0 mt-8 lg:mt-0">
+          <div className="flex-shrink-0 mt-8 lg:mt-0 will-change-transform">
             <div className="relative">
               <div className="w-48 h-48 sm:w-60 sm:h-60 md:w-72 md:h-72 lg:w-80 lg:h-80 rounded-full border-2 md:border-4 border-purple-500/50 flex items-center justify-center bg-gradient-to-br from-purple-600/20 to-pink-600/20 backdrop-blur-sm">
                 <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-60 lg:h-60 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center">
@@ -62,19 +62,21 @@ function HeroSection() {
                   />
                 </div>
               </div>
-              <div className="absolute inset-0 rounded-full border border-purple-400/30 animate-pulse"></div>
-              <div className="absolute -inset-2 md:-inset-4 rounded-full border border-purple-400/20 animate-ping"></div>
+              <div className="absolute inset-0 rounded-full border border-purple-400/30 animate-pulse will-change-opacity"></div>
+              <div className="absolute -inset-2 md:-inset-4 rounded-full border border-purple-400/20 animate-ping will-change-transform"></div>
             </div>
           </div>
         </div>
        
         {/* Bouncing Down Icon */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce will-change-transform">
           <ChevronDown className="w-8 h-8 text-white" />
         </div>
       </div>
     </div>
   );
-}
+});
+
+HeroSection.displayName = 'HeroSection';
 
 export default HeroSection

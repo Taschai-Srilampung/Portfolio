@@ -52,6 +52,7 @@ export const useStaggeredAnimation = (itemCount, options = {}) => {
   
   const [visibleItems, setVisibleItems] = useState(new Set());
   const ref = useRef();
+  const timeoutsRef = useRef([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,15 +60,19 @@ export const useStaggeredAnimation = (itemCount, options = {}) => {
         if (entry.isIntersecting) {
           // Stagger animation for each item
           for (let i = 0; i < itemCount; i++) {
-            setTimeout(() => {
+            const timeoutId = setTimeout(() => {
               setVisibleItems(prev => new Set([...prev, i]));
             }, i * staggerDelay);
+            timeoutsRef.current.push(timeoutId);
           }
           
           if (triggerOnce) {
             observer.unobserve(entry.target);
           }
         } else if (!triggerOnce) {
+          // Clear all timeouts
+          timeoutsRef.current.forEach(id => clearTimeout(id));
+          timeoutsRef.current = [];
           setVisibleItems(new Set());
         }
       },
@@ -82,6 +87,9 @@ export const useStaggeredAnimation = (itemCount, options = {}) => {
     }
 
     return () => {
+      // Cleanup: clear all timeouts
+      timeoutsRef.current.forEach(id => clearTimeout(id));
+      timeoutsRef.current = [];
       if (ref.current) {
         observer.unobserve(ref.current);
       }

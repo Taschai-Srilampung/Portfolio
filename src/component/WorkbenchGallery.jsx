@@ -104,16 +104,16 @@ function WorkbenchGallery() {
     },
     // YouTube Videos (อันนี้ใช้ String ได้เพราะเป็น Link ภายนอก)
     {
-      id: 1,
+      id: 8,
       type: 'youtube',
-      id: 'oZHkCvXODiU',
+      youtubeId: 'oZHkCvXODiU',
       caption: 'IoT Project: WiFi-controlled RC Car using ESP32',
       alt: 'WiFi controlled RC car demo'
     },
     {
-      id: 2,
+      id: 9,
       type: 'youtube',
-      id: 'tHGP9oJpWbw',
+      youtubeId: 'tHGP9oJpWbw',
       caption: 'Embedded Control: IR Remote & Servo Motor Test',
       alt: 'IR remote servo motor test'
     }
@@ -229,7 +229,7 @@ function WorkbenchGallery() {
             <div className="relative w-full h-full">
               {currentItem.type === 'youtube' ? (
                 <iframe
-                  src={`https://www.youtube.com/embed/${currentItem.id}?rel=0&modestbranding=1`}
+                  src={`https://www.youtube.com/embed/${currentItem.youtubeId}?rel=0&modestbranding=1`}
                   className="w-full h-full object-contain bg-black"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
