@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+// --- 1. IMPORT รูปภาพเข้ามาก่อน (เพื่อให้ Vite รู้จักไฟล์นี้) ---
+// ตรวจสอบชื่อไฟล์ตัวเล็กตัวใหญ่ให้เป๊ะนะครับ (JPG vs jpg)
+import imgWorkspace from '../assets/IMG_8171.JPG';
+import imgHandsOn from '../assets/IMG_8170.JPG';
+import imgRobotFinal from '../assets/IMG_7922.jpg';
+import imgWiring from '../assets/IMG_7900.jpg';
+import imgDevEnv from '../assets/IMG_4085.jpg';
+
 // Custom SVG Icons
 const ChevronLeftIcon = () => (
   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -56,45 +64,45 @@ function WorkbenchGallery() {
   const autoSlideTimerRef = useRef(null);
   const [headerRef, isHeaderVisible] = useScrollAnimation();
 
-  // Gallery items with captions - IMAGES FIRST, then YOUTUBE VIDEOS
+  // --- 2. ใช้ตัวแปรที่ Import มาใส่ใน src แทน String ---
   const galleryItems = [
     // Images
     {
       id: 3,
       type: 'image',
-      src: '/src/assets/IMG_8171.JPG',
+      src: imgWorkspace, // ใช้ตัวแปร imgWorkspace
       caption: 'My R&D Lab: Where prototyping happens',
       alt: 'R&D Lab workspace'
     },
     {
       id: 4,
       type: 'image',
-      src: '/src/assets/IMG_8170.JPG',
+      src: imgHandsOn, // ใช้ตัวแปร imgHandsOn
       caption: 'Hands-on: Component-level troubleshooting',
       alt: 'Component troubleshooting'
     },
     {
       id: 5,
       type: 'image',
-      src: '/src/assets/IMG_7922.jpg',
+      src: imgRobotFinal,
       caption: 'Autonomous Robot: Final Assembly',
       alt: 'Robot final assembly'
     },
     {
       id: 6,
       type: 'image',
-      src: '/src/assets/IMG_7900.jpg',
+      src: imgWiring,
       caption: 'Wiring: Complex GPIO & Sensor Integration',
       alt: 'GPIO and sensor wiring'
     },
     {
       id: 7,
       type: 'image',
-      src: '/src/assets/IMG_4085.jpg',
+      src: imgDevEnv,
       caption: 'Dev Environment: Arduino IDE & ESP32 Testing',
       alt: 'Arduino IDE and ESP32 testing'
     },
-    // YouTube Videos
+    // YouTube Videos (อันนี้ใช้ String ได้เพราะเป็น Link ภายนอก)
     {
       id: 1,
       type: 'youtube',
