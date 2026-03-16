@@ -145,11 +145,11 @@ function Contact() {
   ];
 
   const expertise = [
-    "Robotics Software Development",
+    "Robotics & IoT Development",
     "Embedded Systems Programming",
+    "Full-Stack Web Development",
+    "Real-Time Control Systems",
     "Hardware-Software Integration",
-    "ROS2 & Autonomous Navigation",
-    "Sensor Integration & SLAM",
     "Mobile Device Repair & Troubleshooting"
   ];
 
@@ -195,8 +195,8 @@ function Contact() {
             </h1>
             <div className="w-20 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full mb-8"></div>
             <p className="text-gray-300 text-base sm:text-lg lg:text-xl max-w-4xl mx-auto leading-relaxed">
-              Passionate Robotics Software Engineer seeking opportunities to contribute to innovative robotics projects. 
-              Experienced in ROS2, embedded systems, and hardware-software integration with a strong foundation in problem-solving.
+              Software Engineer with hands-on IoT and embedded systems experience. 
+              Currently building real-time vehicle control platforms at Tiny Stack with React, Node.js, WebSocket, and Raspberry Pi.
             </p>
           </div>
 
@@ -317,9 +317,9 @@ function Contact() {
 
                 {/* Current Project Highlight */}
                 <div className="bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-500/20 rounded-lg p-4 mb-6">
-                  <h3 className="text-white font-semibold mb-2">🤖 Current Project</h3>
+                  <h3 className="text-white font-semibold mb-2">🏎️ Current Project</h3>
                   <p className="text-gray-300 text-sm">
-                    Developing an autonomous cleaning robot with ROS2 navigation and SLAM implementation using ESP32 and LiDAR sensors.
+                    Building TinyRC at Tiny Stack — a full-stack real-time RC vehicle control platform with React dashboard, WebSocket backend, servo gimbal camera, and live Pi Camera streaming.
                   </p>
                 </div>
 
@@ -327,7 +327,7 @@ function Contact() {
                 <div className="space-y-3 mb-8">
                   <div className="flex items-center gap-3 text-gray-300">
                     <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                    <span className="text-sm">Entry-level position seeker with strong fundamentals</span>
+                    <span className="text-sm">Entry-level position seeker with real production experience</span>
                   </div>
                   <div className="flex items-center gap-3 text-gray-300">
                     <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse delay-300"></div>

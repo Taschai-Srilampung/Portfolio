@@ -134,8 +134,8 @@ function Footer() {
               </h3>
               <div className="w-12 h-1 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mb-4"></div>
               <p className="text-gray-300 leading-relaxed mb-3">
-              Hi, I'm Taschai — a passionate Computer Science graduate exploring robotics and automation. 
-              I'm currently learning ROS2, experimenting with embedded systems, and developing hands-on experience with hardware-software integration.
+              Hi, I'm Taschai — a passionate Computer Science graduate building real-time IoT platforms and exploring robotics. 
+              Currently an R&D Technician at Tiny Stack, developing full-stack web applications with hardware integration.
               </p>
               <div className="text-purple-400 font-medium italic text-sm">
                 "Sometimes I look impossible until it's done."
@@ -257,10 +257,10 @@ function Footer() {
           <div className="mt-8 text-center">
             <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-lg p-6 backdrop-blur-sm">
               <p className="text-lg font-semibold text-purple-300 mb-2">
-                Currently seeking entry-level opportunities in Robotics Software Engineering!
-              </p>
-              <p className="text-gray-300 text-sm">
-                Looking for a dedicated Computer Science graduate eager to learn and grow in robotics? Let's build the future together! 🤖
+              Currently seeking opportunities in Software Engineering and Robotic Software Engineering!
+            </p>
+            <p className="text-gray-300 text-sm">
+              Looking for a dedicated Computer Science graduate with real production IoT experience? Let's build the future together! 🤖
               </p>
             </div>
           </div>

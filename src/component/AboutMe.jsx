@@ -18,11 +18,11 @@ const AboutMe = React.memo(() => {
 
   const recentProjects = [
     {
-      title: "R&D Technician (Confidential Project)",
-      type: "Professional Experience",
+      title: "TinyRC — Remote Control Platform",
+      type: "Professional Experience (Tiny Stack)",
       period: "Nov 2025 - Present",
-      description: "Prototype Assembly: Hands-on assembly of Raspberry Pi units, researching GPIO pinouts, and wiring sensors based on component specifications. System Setup: Installed OS and configured software environments for testing purposes. Testing & Support: Conducted functional tests and assisted engineers in troubleshooting hardware-software integration issues.",
-      tech: ["Raspberry Pi", "GPIO", "Sensor Integration", "System Configuration", "Hardware Testing"]
+      description: "Built a full-stack real-time RC vehicle control platform with React dashboard, Node.js/WebSocket backend, and Raspberry Pi hardware. Designed servo gimbal (pan/tilt) for camera control, battery charging circuits, queue-based user system, and live video streaming via Pi Camera.",
+      tech: ["React", "Node.js", "WebSocket", "Raspberry Pi", "Servo Gimbal", "Pi Camera"]
     },
     {
       title: "Smartphone Repair Technician",
@@ -32,18 +32,11 @@ const AboutMe = React.memo(() => {
       tech: ["Hardware Repair", "Firmware", "Debugging", "System Integration"]
     },
     {
-      title: "Autonomous Cleaning Robot",
-      type: "Personal Project",
-      period: "2025 - Present",
-      description: "Learning ROS2 navigation concepts and SLAM implementation. Planning to integrate repurposed Xiaomi vacuum LiDAR sensor with ESP32 and Micro-ROS for cost-effective hardware interface.",
-      tech: ["ROS2", "SLAM", "ESP32", "Micro-ROS", "LiDAR"]
-    },
-    {
       title: "Equipment Management System",
       type: "Senior Project",
       period: "2024",
-      description: "Developed web application using React frontend and Node.js backend. Deployed system for university department use with full-stack development and cloud deployment experience.",
-      tech: ["React", "Node.js", "Full-stack", "Cloud Deployment"]
+      description: "Developed web application using React frontend and Node.js/Strapi backend with MySQL. Deployed system for university department use with full-stack development and cloud deployment experience.",
+      tech: ["React", "Node.js", "Strapi", "MySQL", "Cloud Deployment"]
     },
     {
       title: "Vehicle & Barrier Detection using YOLOv8",
@@ -52,7 +45,6 @@ const AboutMe = React.memo(() => {
       description: "Trained object detection model on manually labeled Google Maps imagery. Demonstrated computer vision concepts and machine learning model training.",
       tech: ["YOLOv8", "Computer Vision", "Python", "Machine Learning"]
     },
-    
   ];
 
   return (
@@ -97,17 +89,17 @@ const AboutMe = React.memo(() => {
                 Taschai Srilampung
               </h3>
               <p className="text-xl sm:text-2xl font-semibold text-gray-300 mb-4 lg:mb-6">
-                Robotics Software Engineer
+                Software Engineer & Robotic Software Engineer
               </p>
             </div>
             
             {/* Description */}
             <div className="space-y-4 transform transition-all duration-700 delay-500 will-change-contents">
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                Computer Science graduate and Robotics Software Engineer with a hands-on "Maker" mindset. Currently working as an R&D Technician, where I bridge the gap between high-level software and physical hardware. My work involves building Raspberry Pi prototypes, researching GPIO pinouts, and troubleshooting complex hardware-software integrations.
+                Computer Science graduate and Software Engineer with a hands-on "Maker" mindset. Currently working as an R&D Technician at Tiny Stack, building a real-time RC vehicle control platform (TinyRC) — from designing servo gimbal hardware and battery circuits to developing the full-stack web dashboard with React, Node.js, and WebSocket.
               </p>
               <p className="text-gray-300 text-sm sm:text-base lg:text-lg leading-relaxed">
-                With a background in mobile device repair, I bring a unique advantage in systematic diagnosis and component-level troubleshooting. I am passionate about ROS2, Embedded Systems, and IoT, constantly seeking to apply my technical skills to create innovative solutions and share knowledge with the maker community.
+                With a background in mobile device repair, I bring a unique advantage in systematic diagnosis and component-level troubleshooting. I am passionate about IoT, Embedded Systems, and Full-Stack Development, constantly seeking to apply my technical skills to create innovative solutions and share knowledge with the maker community.
               </p>
             </div>
             
@@ -136,7 +128,7 @@ const AboutMe = React.memo(() => {
             <div className="transform transition-all duration-700 delay-800 will-change-contents">
               <h4 className="text-lg font-semibold text-purple-400 mb-3">Core Technologies</h4>
               <div className="flex flex-wrap gap-2">
-                {["ROS2", "ESP32", "Arduino", "Python", "C/C++", "Linux", "SLAM", "Computer Vision"].map((skill, index) => (
+                {["React", "Node.js", "WebSocket", "Raspberry Pi", "Python", "Linux", "ESP32", "IoT"].map((skill, index) => (
                   <span 
                     key={index}
                     className="px-3 py-1 bg-purple-500/20 text-purple-300 text-sm rounded-full border border-purple-500/30 hover:bg-purple-500/30 transition-colors duration-300 will-change-colors"

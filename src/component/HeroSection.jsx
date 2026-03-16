@@ -19,7 +19,7 @@ const HeroSection = React.memo(() => {
           
           {/* Left content */}
           <div className="flex-1 max-w-2xl text-center lg:text-left mb-8 lg:mb-0 will-change-contents">
-            <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Robotics Software Engineer</p>
+            <p className="text-purple-400 text-base md:text-lg mb-3 md:mb-4">Software Engineer & Robotic Software Engineer</p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-4 md:mb-6 leading-tight will-change-contents">
               Hi, I'm{' '}
               <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -28,7 +28,7 @@ const HeroSection = React.memo(() => {
             </h1>
             <TypewriterText />
             <p className="text-gray-300 text-sm sm:text-base md:text-lg mb-6 md:mb-8 leading-relaxed max-w-xl mx-auto lg:mx-0">
-              Computer Science graduate specializing in Robotics, ROS2, and Embedded Systems. Passionate about bridging the gap between high-level software and hands-on hardware making. Experienced in system integration, Raspberry Pi, and troubleshooting.
+              Computer Science graduate specializing in Full-Stack Development, IoT, and Embedded Systems. Currently building a real-time RC vehicle control platform at Tiny Stack — from React/Node.js dashboards to servo gimbal hardware and Raspberry Pi integration.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
               <a

@@ -142,40 +142,40 @@ function FeaturedProjects() {
   const projects = [
     {
       id: 1,
-      title: "Autonomous Cleaning Robot",
-      category: "Robotics",
-      type: "In Development",
-      description: "Developing an autonomous cleaning robot using ROS2 navigation and SLAM implementation with repurposed Xiaomi vacuum LiDAR sensor and ESP32 microcontroller.",
-      longDescription: "Currently building an autonomous cleaning robot that integrates ROS2 navigation concepts with practical hardware solutions. This project focuses on cost-effective robotics implementation using ESP32 and Micro-ROS.",
-      image: "🤖",
-      technologies: ["ROS2", "SLAM", "ESP32", "Micro-ROS", "LiDAR", "C++"],
+      title: "TinyRC — Real-Time RC Vehicle Platform",
+      category: "Full Stack",
+      type: "Professional Project",
+      description: "Full-stack real-time RC vehicle control platform built at Tiny Stack. React dashboard + Node.js/WebSocket backend + Raspberry Pi hardware with servo gimbal camera system and live video streaming.",
+      longDescription: "Built a complete IoT platform for controlling RC vehicles remotely with real-time video feedback, queue-based user management, and an admin dashboard. Designed and assembled all hardware including servo gimbal for camera pan/tilt and battery charging circuits.",
+      image: "🏎️",
+      technologies: ["React", "Node.js", "WebSocket", "Raspberry Pi", "Python", "GPIO", "Pi Camera"],
       features: [
-        "ROS2 navigation implementation",
-        "SLAM mapping and localization",
-        "ESP32 with Micro-ROS integration",
-        "Repurposed Xiaomi vacuum LiDAR",
-        "Cost-effective hardware design",
-        "Autonomous navigation system"
+        "Real-time WebSocket vehicle control",
+        "Servo gimbal camera (pan/tilt via GPIO)",
+        "Live Pi Camera video streaming",
+        "Queue-based user management system",
+        "Admin dashboard with analytics",
+        "Battery charging circuit design"
       ],
       metrics: {
-        role: "Robotics Engineer",
-        duration: "Ongoing",
-        status: "Development"
+        role: "Full Stack + HW",
+        duration: "2025-Present",
+        status: "Production"
       },
-      timeline: "2025 - Present",
-      team: "Personal Project",
-      role: "Robotics Software Engineer",
+      timeline: "Nov 2025 - Present",
+      team: "Tiny Stack R&D",
+      role: "R&D Technician / Full-Stack Developer",
       challenges: [
-        "Implementing SLAM algorithms efficiently",
-        "ESP32 resource optimization for ROS2",
-        "LiDAR sensor integration and calibration",
-        "Cost-effective hardware selection"
+        "Real-time latency optimization for vehicle control",
+        "Servo gimbal hardware design and calibration",
+        "Pi Camera streaming performance",
+        "Battery circuit safety and charging management"
       ],
       achievements: [
-        "Successfully testing ROS2 nodes on ESP32",
-        "Servo motor integration with microcontroller",
-        "Learning advanced robotics concepts",
-        "Building practical robotics experience"
+        "Deployed production-ready platform",
+        "Designed complete hardware from scratch",
+        "Built real-time control with < 100ms latency",
+        "Implemented queue system for multiple users"
       ],
       demoUrl: null,
       githubUrl: null,
@@ -361,8 +361,8 @@ function FeaturedProjects() {
     }
   ];
 
-  // Filter categories prioritizing robotics and AI/ML
-  const allCategories = ['All', 'Robotics', 'AI/ML', 'Hardware', 'Full Stack'];
+  // Filter categories
+  const allCategories = ['All', 'Full Stack', 'AI/ML', 'Hardware'];
   const categories = allCategories.filter(category => {
     if (category === 'All') return true;
     return projects.some(project => project.category === category);
@@ -377,27 +377,27 @@ function FeaturedProjects() {
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 4);
   const hasMoreProjects = filteredProjects.length > 4;
 
-  // Project statistics focused on robotics and AI
+  // Project statistics
   const projectStats = [
+    {
+      number: "1",
+      label: "IoT Platform",
+      description: "TinyRC Full-Stack + Hardware"
+    },
     {
       number: "2",
       label: "AI/ML Projects",
       description: "Computer Vision & Deep Learning"
     },
     {
-      number: "1",
-      label: "Robotics Project",
-      description: "ROS2 & Autonomous Systems"
-    },
-    {
-      number: "3+",
-      label: "Programming Languages",
-      description: "Python, C++, JavaScript"
+      number: "5+",
+      label: "Technologies",
+      description: "React, Node.js, Python, Pi, GPIO"
     },
     {
       number: "2025",
       label: "Career Focus",
-      description: "Robotics Software Engineer"
+      description: "Software & Robotic Engineer"
     }
   ];
 

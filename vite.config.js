@@ -16,7 +16,7 @@ export default defineConfig({
   server: {
     host: '0.0.0.0',   // <<< สำคัญ
     port: 5174,        // หรือพอร์ตอื่นที่คุณต้องการ
-    allowedHosts: ['myryolife.tech', 'www.myryolife.tech'],
+    allowedHosts: ['taschai.tech', 'www.taschai.tech'],
   }
 
 })

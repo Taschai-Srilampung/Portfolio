@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
 const phrases = [
-  "I develop autonomous systems.",
-  "I build robotic solutions.",
-  "I create intelligent machines."
+  "I build real-time IoT platforms.",
+  "I develop full-stack web apps.",
+  "I design hardware & software."
 ];
 
 // Memoize the display text computation
