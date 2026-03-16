@@ -584,15 +584,22 @@ function FeaturedProjects() {
                           Demo N/A
                         </div>
                       )}
-                      <a 
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 bg-gray-700/50 text-gray-300 py-3 rounded-lg font-medium hover:bg-gray-600/50 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group"
-                      >
-                        <GithubIcon />
-                        View Code
-                      </a>
+                      {project.githubUrl ? (
+                        <a 
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex-1 bg-gray-700/50 text-gray-300 py-3 rounded-lg font-medium hover:bg-gray-600/50 hover:text-white transition-all duration-300 flex items-center justify-center gap-2 group"
+                        >
+                          <GithubIcon />
+                          View Code
+                        </a>
+                      ) : (
+                        <div className="flex-1 bg-gray-600/30 text-gray-500 py-3 rounded-lg font-medium flex items-center justify-center gap-2 cursor-not-allowed">
+                          <GithubIcon />
+                          Private
+                        </div>
+                      )}
                     </div>
                   </div>
 
